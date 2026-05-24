@@ -20,16 +20,16 @@ const organizadoras = [
 ];
 
 const jurado = [
-  "Melisa Costa",
-  "Maria Cristina Gómez",
-  "Viko Sansó de la Madrid",
-  "Alejandro Dario Distefano",
+  "Alejandro Darío Distefano",
   "Carolina Rovetto",
+  "Flor Milano",
+  "Laura Mustapich",
   "Leila Sosa",
+  "Maria Alejandra Gayoso",
+  "Maria Cristina Gomez",
   "Melina Zamboni",
-  "Maria Alejandra Gayos",
-  "Maria Laura Musanich",
-  "Flor Milani",
+  "Melisa Costa",
+  "Viko Sanso de la Madrid",
 ];
 
 export default function OrganizadorasSection() {
@@ -155,7 +155,7 @@ export default function OrganizadorasSection() {
               <div className="h-px w-20 bg-gold/30" />
             </div>
             <p className="text-charcoal/60 mt-6 max-w-lg mx-auto">
-              Un jurado especializado que selecciona a 30 de las 50 mujeres líderes del reconocimiento.
+              Un jurado especializado que selecciona a 25 de las 50 mujeres líderes del reconocimiento.
             </p>
           </div>
 
