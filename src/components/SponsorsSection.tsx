@@ -1,4 +1,6 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
+import FadeIn from "@/components/FadeIn";
 
 const placeholders = [
   { label: "Sponsor Oro", spots: 2 },
@@ -26,6 +28,24 @@ export default function SponsorsSection() {
             Empresas y organizaciones que hacen posible celebrar el liderazgo femenino en Santa Fe.
           </p>
         </div>
+
+        {/* Sponsors 2026 */}
+        <FadeIn direction="up">
+          <div className="mb-16">
+            <p className="text-center text-charcoal/40 text-xs tracking-[0.25em] uppercase font-semibold mb-8">
+              Quienes nos acompañaron en 2026
+            </p>
+            <div className="max-w-sm mx-auto rounded-3xl overflow-hidden shadow-md border border-gold/15">
+              <Image
+                src="/sponsors26.png"
+                alt="Sponsors Ellas Lideran 2026"
+                width={600}
+                height={800}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </FadeIn>
 
         {/* Sponsor tiers */}
         <div className="grid sm:grid-cols-3 gap-6 mb-16">
