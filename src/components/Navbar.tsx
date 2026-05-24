@@ -72,19 +72,34 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           aria-label="Menu"
         >
-          {open ? <X size={24} /> : <Menu size={24} />}
+          <span className={`block transition-all duration-300 ${open ? "rotate-90 opacity-0 absolute" : "rotate-0 opacity-100"}`}>
+            <Menu size={24} />
+          </span>
+          <span className={`block transition-all duration-300 ${open ? "rotate-0 opacity-100" : "-rotate-90 opacity-0 absolute"}`}>
+            <X size={24} />
+          </span>
         </button>
       </div>
 
       {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden bg-white border-t border-gold/20 px-6 py-4 flex flex-col gap-4">
-          {links.map((l) => (
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white border-t border-gold/20 ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="px-6 py-4 flex flex-col gap-1">
+          {links.map((l, i) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-charcoal/80 font-medium py-1 hover:text-gold transition-colors"
+              className="text-charcoal/80 font-medium py-2 hover:text-gold transition-colors border-b border-gold/10 last:border-0"
+              style={{
+                transitionDelay: open ? `${i * 40}ms` : "0ms",
+                opacity: open ? 1 : 0,
+                transform: open ? "translateX(0)" : "translateX(-8px)",
+                transition: "color 0.2s, opacity 0.3s ease, transform 0.3s ease",
+              }}
             >
               {l.label}
             </a>
@@ -92,12 +107,18 @@ export default function Navbar() {
           <a
             href="#inscripcion"
             onClick={() => setOpen(false)}
-            className="mt-2 px-5 py-2 bg-gold text-white text-sm font-semibold rounded-full text-center hover:bg-gold-dark transition-colors"
+            className="mt-3 px-5 py-2.5 bg-gold text-white text-sm font-semibold rounded-full text-center hover:bg-gold-dark transition-colors"
+            style={{
+              transitionDelay: open ? `${links.length * 40}ms` : "0ms",
+              opacity: open ? 1 : 0,
+              transform: open ? "translateY(0)" : "translateY(8px)",
+              transition: "background-color 0.2s, opacity 0.3s ease, transform 0.3s ease",
+            }}
           >
             Inscribirte
           </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 }
