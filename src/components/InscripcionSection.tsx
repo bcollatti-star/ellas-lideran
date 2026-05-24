@@ -86,7 +86,7 @@ export default function InscripcionSection() {
             <div className="h-px w-20 bg-white/30" />
           </div>
           <p className="text-white/70 mt-6">
-            9 de Marzo 2026 · Fundación Pensar, Pellegrini 1780, Rosario
+            9 de Marzo 2027 · Salón Metropolitano, Rosario
           </p>
         </div>
 

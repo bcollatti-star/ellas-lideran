@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "Sobre el Evento", href: "#sobre" },
@@ -31,21 +32,15 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#hero" className="flex items-center gap-2">
-          <span
-            className={`font-display text-xl font-bold tracking-wide transition-colors duration-300 ${
-              scrolled ? "text-charcoal" : "text-white"
-            }`}
-          >
-            Ellas <span className="text-gold">Lideran</span>
-          </span>
-          <span
-            className={`text-xs tracking-widest uppercase transition-colors duration-300 ${
-              scrolled ? "text-gold" : "text-gold-light"
-            }`}
-          >
-            Santa Fe
-          </span>
+        <a href="#hero" className="flex items-center">
+          <Image
+            src={scrolled ? "/logo-ellas-lideran-gold.png" : "/logo-ellas-lideran-white.png"}
+            alt="Ellas Lideran Santa Fe"
+            width={140}
+            height={56}
+            className="h-9 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop links */}

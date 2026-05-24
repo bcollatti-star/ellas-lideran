@@ -1,22 +1,10 @@
 import { Star, Eye, Network, TrendingUp } from "lucide-react";
 
 const propósitos = [
-  {
-    icon: Star,
-    text: "Inspirar a nuevas generaciones de mujeres líderes.",
-  },
-  {
-    icon: Eye,
-    text: "Visibilizar historias y proyectos que impulsan el desarrollo santafesino.",
-  },
-  {
-    icon: Network,
-    text: "Consolidar una red provincial de mujeres que son motor de futuro y crecimiento.",
-  },
-  {
-    icon: TrendingUp,
-    text: "Fortalecer la participación y el liderazgo femenino en todos los sectores.",
-  },
+  { icon: Star, text: "Inspirar a nuevas generaciones de mujeres líderes." },
+  { icon: Eye, text: "Visibilizar historias y proyectos que impulsan el desarrollo santafesino." },
+  { icon: Network, text: "Consolidar una red provincial de mujeres que son motor de futuro y crecimiento." },
+  { icon: TrendingUp, text: "Fortalecer la participación y el liderazgo femenino en todos los sectores." },
 ];
 
 export default function SobreSection() {
@@ -24,7 +12,6 @@ export default function SobreSection() {
     <section id="sobre" className="bg-cream py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          {/* Left: text */}
           <div>
             <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4">
               Sobre el Evento
@@ -47,7 +34,6 @@ export default function SobreSection() {
             </p>
           </div>
 
-          {/* Right: purposes */}
           <div>
             <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-6">
               Propósito
@@ -68,21 +54,18 @@ export default function SobreSection() {
           </div>
         </div>
 
-        {/* Stats bar */}
-        <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-px bg-gold/20 rounded-3xl overflow-hidden shadow-sm">
+        {/* Stats bar — 4 columns */}
+        <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-gold/20 rounded-3xl overflow-hidden shadow-sm">
           {[
             { value: "50", label: "Mujeres reconocidas", sub: "líderes de la provincia" },
-            {
-              value: "100",
-              label: "Preseleccionadas",
-              sub: "elegidas por la organización",
-            },
+            { value: "100", label: "Preseleccionadas", sub: "elegidas por la organización" },
+            { value: "+1000", label: "Postuladas", sub: "en la edición 2026" },
             { value: "12", label: "Ámbitos de liderazgo", sub: "sectores de la sociedad" },
           ].map(({ value, label, sub }) => (
-            <div key={label} className="bg-white px-8 py-10 text-center">
-              <p className="font-display text-5xl font-bold text-gold">{value}</p>
-              <p className="font-semibold text-charcoal mt-2">{label}</p>
-              <p className="text-charcoal/50 text-sm mt-1">{sub}</p>
+            <div key={label} className="bg-white px-6 py-10 text-center">
+              <p className="font-display text-4xl font-bold text-gold">{value}</p>
+              <p className="font-semibold text-charcoal mt-2 text-sm">{label}</p>
+              <p className="text-charcoal/50 text-xs mt-1">{sub}</p>
             </div>
           ))}
         </div>

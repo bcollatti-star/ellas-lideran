@@ -1,4 +1,5 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
 
 const partners = [
   { name: "Fundación Pensar", type: "Venue & Partner institucional", initials: "FP" },
@@ -42,8 +43,14 @@ export default function SponsorsSection() {
                 key={name}
                 className="flex flex-col items-center gap-3 bg-gold/5 border border-gold/30 rounded-3xl px-12 py-8"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gold/20 flex items-center justify-center">
-                  <span className="font-display text-xl font-bold text-gold">{initials}</span>
+                <div className="w-16 h-16 rounded-2xl bg-gold/20 flex items-center justify-center overflow-hidden">
+                  <Image
+                    src="/logo-fp.png"
+                    alt={name}
+                    width={64}
+                    height={64}
+                    className="object-contain w-full h-full p-1"
+                  />
                 </div>
                 <div className="text-center">
                   <p className="font-semibold text-charcoal">{name}</p>
@@ -85,7 +92,7 @@ export default function SponsorsSection() {
             Sumá tu marca a un evento que celebra el liderazgo femenino y el impacto social en Santa Fe.
           </p>
           <a
-            href="mailto:contacto@ellaslideran.com"
+            href="mailto:ellaslideransantafe@gmail.com"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-white font-semibold rounded-full hover:bg-gold-dark transition-all duration-200 hover:-translate-y-0.5 shadow-lg shadow-gold/20"
           >
             <Mail size={16} />

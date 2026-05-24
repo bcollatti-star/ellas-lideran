@@ -1,4 +1,5 @@
 import { MapPin, Mail } from "lucide-react";
+import Image from "next/image";
 import InstagramIcon from "@/components/InstagramIcon";
 
 const navLinks = [
@@ -19,10 +20,13 @@ export default function FooterSection() {
           {/* Brand */}
           <div>
             <div className="mb-4">
-              <p className="font-display text-3xl font-bold text-white">
-                Ellas <span className="italic text-gold">Lideran</span>
-              </p>
-              <p className="text-gold/60 text-xs tracking-widest uppercase mt-1">Santa Fe</p>
+              <Image
+                src="/logo-ellas-lideran-white.png"
+                alt="Ellas Lideran Santa Fe"
+                width={160}
+                height={64}
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
               El reconocimiento provincial a mujeres santafesinas que transforman la provincia con
@@ -63,8 +67,8 @@ export default function FooterSection() {
               <div className="flex gap-3">
                 <MapPin size={16} className="text-gold flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/80 text-sm font-medium">Fundación Pensar</p>
-                  <p className="text-white/40 text-sm">Pellegrini 1780, Rosario, Santa Fe</p>
+                  <p className="text-white/80 text-sm font-medium">Salón Metropolitano</p>
+                  <p className="text-white/40 text-sm">Rosario, Santa Fe</p>
                 </div>
               </div>
               <div className="flex gap-3">
@@ -72,14 +76,14 @@ export default function FooterSection() {
                   <span className="w-1 h-1 rounded-full bg-gold" />
                 </div>
                 <div>
-                  <p className="text-white/80 text-sm font-medium">09 de Marzo · 2026</p>
+                  <p className="text-white/80 text-sm font-medium">09 de Marzo · 2027</p>
                   <p className="text-white/40 text-sm">18:00 hs</p>
                 </div>
               </div>
               <div className="flex gap-3">
                 <Mail size={16} className="text-gold flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/40 text-sm">contacto@ellaslideran.com</p>
+                  <p className="text-white/40 text-sm">ellaslideransantafe@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -99,7 +103,7 @@ export default function FooterSection() {
 
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 text-white/30 text-xs">
-          <p>© 2026 Ellas Lideran Santa Fe. Todos los derechos reservados.</p>
+          <p>© 2027 Ellas Lideran Santa Fe. Todos los derechos reservados.</p>
           <p className="flex items-center gap-1">
             50 mujeres · 1 provincia · Un legado
           </p>
