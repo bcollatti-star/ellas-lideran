@@ -1,8 +1,91 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import FadeIn from "@/components/FadeIn";
 
 const generales = Array.from({ length: 8 }, (_, i) => `/general_${i + 1}.jpeg`);
 const ganadoras = Array.from({ length: 11 }, (_, i) => `/ganadoras_${i + 1}.jpeg`);
+
+function Carousel({ images, label }: { images: string[]; label: string }) {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  const prev = useCallback(() => setCurrent((c) => (c - 1 + images.length) % images.length), [images.length]);
+  const next = useCallback(() => setCurrent((c) => (c + 1) % images.length), [images.length]);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(next, 4000);
+    return () => clearInterval(id);
+  }, [paused, next]);
+
+  return (
+    <div
+      className="relative max-w-2xl mx-auto"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+    >
+      {/* Image area */}
+      <div className="relative rounded-3xl overflow-hidden bg-charcoal/5 border border-gold/15 shadow-lg">
+        <div className="relative aspect-[4/3]">
+          {images.map((src, i) => (
+            <div
+              key={src}
+              className="absolute inset-0 transition-opacity duration-500"
+              style={{ opacity: i === current ? 1 : 0 }}
+            >
+              <Image
+                src={src}
+                alt={`${label} ${i + 1}`}
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 672px"
+                priority={i === 0}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Arrows */}
+        <button
+          onClick={() => { prev(); setPaused(true); }}
+          aria-label="Anterior"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow hover:bg-white transition-colors"
+        >
+          <ChevronLeft size={18} className="text-charcoal" />
+        </button>
+        <button
+          onClick={() => { next(); setPaused(true); }}
+          aria-label="Siguiente"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow hover:bg-white transition-colors"
+        >
+          <ChevronRight size={18} className="text-charcoal" />
+        </button>
+
+        {/* Counter */}
+        <div className="absolute bottom-3 right-4 text-xs text-charcoal/40 font-semibold tabular-nums bg-white/70 backdrop-blur-sm px-2 py-0.5 rounded-full">
+          {current + 1} / {images.length}
+        </div>
+      </div>
+
+      {/* Dots */}
+      <div className="flex justify-center gap-1.5 mt-4">
+        {images.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => { setCurrent(i); setPaused(true); }}
+            aria-label={`Foto ${i + 1}`}
+            className={`rounded-full transition-all duration-300 ${
+              i === current ? "w-4 h-1.5 bg-gold" : "w-1.5 h-1.5 bg-gold/25"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function GaleriaSection() {
   return (
@@ -26,8 +109,8 @@ export default function GaleriaSection() {
           </div>
         </FadeIn>
 
-        {/* Fotos generales */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-20">
+        {/* Fotos generales — grilla está bien */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-24">
           {generales.map((src, i) => (
             <FadeIn key={src} delay={i * 60} direction="up">
               <div className="relative aspect-square rounded-2xl overflow-hidden group">
@@ -43,9 +126,9 @@ export default function GaleriaSection() {
           ))}
         </div>
 
-        {/* Ganadoras */}
+        {/* Ganadoras — carrusel */}
         <FadeIn>
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3">
               Reconocidas
             </p>
@@ -60,26 +143,15 @@ export default function GaleriaSection() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 mb-20">
-          {ganadoras.map((src, i) => (
-            <FadeIn key={src} delay={i * 50} direction="up">
-              <div className="relative aspect-[3/4] rounded-2xl overflow-hidden group">
-                <Image
-                  src={src}
-                  alt={`Líder reconocida ${i + 1} — Ellas Lideran 2026`}
-                  fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            </FadeIn>
-          ))}
-        </div>
+        <FadeIn direction="up" delay={100}>
+          <div className="mb-24">
+            <Carousel images={ganadoras} label="Líder reconocida — Ellas Lideran 2026" />
+          </div>
+        </FadeIn>
 
         {/* Menciones especiales */}
         <FadeIn>
-          <div className="text-center mb-12">
+          <div className="text-center mb-10">
             <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3">
               Edición 2026
             </p>
@@ -95,14 +167,14 @@ export default function GaleriaSection() {
         </FadeIn>
 
         <FadeIn direction="up" delay={100}>
-          <div className="max-w-3xl mx-auto">
-            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-lg border border-gold/15">
+          <div className="max-w-2xl mx-auto">
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-charcoal/5 border border-gold/15 shadow-lg">
               <Image
                 src="/menciones.jpeg"
                 alt="Menciones especiales Ellas Lideran 2026"
                 fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 768px"
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 672px"
               />
             </div>
           </div>
