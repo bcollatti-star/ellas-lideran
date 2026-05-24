@@ -36,14 +36,10 @@ export default function HeroSection() {
             alt="Ellas Lideran Santa Fe"
             width={480}
             height={220}
-            className="w-auto max-w-xs sm:max-w-sm md:max-w-md"
+            className="w-auto max-w-sm sm:max-w-md md:max-w-lg"
             priority
           />
         </div>
-
-        <p className="text-sm tracking-[0.3em] uppercase text-gold-light mb-8 font-medium">
-          Santa Fe
-        </p>
 
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-16 bg-gold/40" />
