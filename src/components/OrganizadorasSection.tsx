@@ -105,7 +105,7 @@ export default function OrganizadorasSection() {
                   alt="Fundación Pensar Santa Fe"
                   width={56}
                   height={56}
-                  className="object-contain w-full h-full p-1 mix-blend-screen"
+                  className="object-contain w-full h-full p-1"
                 />
               </div>
               <div>
