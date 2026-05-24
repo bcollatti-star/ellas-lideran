@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
+import TrophySection from "@/components/TrophySection";
 import SobreSection from "@/components/SobreSection";
 import AmbitosSection from "@/components/AmbitosSection";
 import FasesSection from "@/components/FasesSection";
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
+        <TrophySection />
         <SobreSection />
         <AmbitosSection />
         <FasesSection />
