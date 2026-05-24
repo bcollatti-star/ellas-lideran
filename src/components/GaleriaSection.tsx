@@ -126,6 +126,34 @@ export default function GaleriaSection() {
           ))}
         </div>
 
+        {/* Territorio */}
+        <FadeIn direction="up">
+          <div className="mb-24">
+            <div className="text-center mb-10">
+              <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-3">
+                Representación territorial
+              </p>
+              <h3 className="font-display text-3xl sm:text-4xl font-bold text-charcoal">
+                30 lugares <span className="italic text-gold">santafesinos</span>
+              </h3>
+              <div className="flex items-center justify-center gap-4 mt-5">
+                <div className="h-px w-16 bg-gold/30" />
+                <div className="w-1.5 h-1.5 rounded-full bg-gold" />
+                <div className="h-px w-16 bg-gold/30" />
+              </div>
+            </div>
+            <div className="max-w-sm mx-auto rounded-3xl overflow-hidden shadow-md border border-gold/15">
+              <Image
+                src="/territorio26.png"
+                alt="Representación territorial Ellas Lideran 2026 — 30 lugares santafesinos"
+                width={600}
+                height={800}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </FadeIn>
+
         {/* Ganadoras — carrusel */}
         <FadeIn>
           <div className="text-center mb-10">
