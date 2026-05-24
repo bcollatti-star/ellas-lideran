@@ -7,9 +7,11 @@ import FasesSection from "@/components/FasesSection";
 import Edicion2026Section from "@/components/Edicion2026Section";
 import OrganizadorasSection from "@/components/OrganizadorasSection";
 import AgendaSection from "@/components/AgendaSection";
+import MapSection from "@/components/MapSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import InscripcionSection from "@/components/InscripcionSection";
 import FooterSection from "@/components/FooterSection";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -24,10 +26,12 @@ export default function Home() {
         <Edicion2026Section />
         <OrganizadorasSection />
         <AgendaSection />
+        <MapSection />
         <SponsorsSection />
         <InscripcionSection />
       </main>
       <FooterSection />
+      <ScrollToTop />
     </>
   );
 }

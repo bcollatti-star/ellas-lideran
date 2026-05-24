@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { MapPin, Calendar } from "lucide-react";
 import InstagramIcon from "@/components/InstagramIcon";
+import Countdown from "@/components/Countdown";
 
 export default function HeroSection() {
   return (
@@ -85,6 +86,12 @@ export default function HeroSection() {
               <p className="text-white/50 text-xs mt-1">{label}</p>
             </div>
           ))}
+        </div>
+
+        {/* Countdown */}
+        <div className="w-full border-t border-white/10 pt-8 pb-8">
+          <p className="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Faltan</p>
+          <Countdown />
         </div>
 
         {/* Instagram */}
