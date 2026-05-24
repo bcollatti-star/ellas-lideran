@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Agenda", href: "#agenda" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
-  { label: "Inscripción", href: "#inscripcion" },
+  { label: "Postular", href: "/postular" },
 ];
 
 export default function FooterSection() {

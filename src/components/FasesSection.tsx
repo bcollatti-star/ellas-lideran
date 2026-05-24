@@ -69,7 +69,7 @@ export default function FasesSection() {
           <div className="mt-12 text-center">
             <p className="text-charcoal/60 mb-4">¿Querés postular a una mujer que admiras?</p>
             <a
-              href="#inscripcion"
+              href="/postular"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-gold text-white font-semibold rounded-full hover:bg-gold-dark transition-all duration-200 hover:-translate-y-0.5 shadow-md shadow-gold/20"
             >
               Postular ahora

@@ -60,10 +60,10 @@ export default function HeroSection() {
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center w-full max-w-sm sm:max-w-none mb-10">
           <a
-            href="#inscripcion"
+            href="/postular"
             className="px-8 py-3.5 bg-gold text-white font-semibold rounded-full hover:bg-gold-dark transition-all duration-200 shadow-lg shadow-gold/20 hover:shadow-gold/30 hover:-translate-y-0.5 text-center"
           >
-            Inscribirte al evento
+            Postular una líder
           </a>
           <a
             href="#sobre"
