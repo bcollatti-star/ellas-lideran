@@ -11,7 +11,6 @@ import MapSection from "@/components/MapSection";
 import GaleriaSection from "@/components/GaleriaSection";
 import PrensaSection from "@/components/PrensaSection";
 import SponsorsSection from "@/components/SponsorsSection";
-import InscripcionSection from "@/components/InscripcionSection";
 import FooterSection from "@/components/FooterSection";
 import ScrollToTop from "@/components/ScrollToTop";
 
@@ -32,7 +31,6 @@ export default function Home() {
         <AgendaSection />
         <MapSection />
         <SponsorsSection />
-        <InscripcionSection />
       </main>
       <FooterSection />
       <ScrollToTop />
