@@ -36,7 +36,7 @@ export default function HeroSection() {
             alt="Ellas Lideran Santa Fe"
             width={480}
             height={220}
-            className="w-auto max-w-xs sm:max-w-sm md:max-w-md"
+            className="w-auto max-w-xs sm:max-w-sm md:max-w-md mix-blend-screen"
             priority
           />
         </div>

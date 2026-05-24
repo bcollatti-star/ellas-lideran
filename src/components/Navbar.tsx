@@ -38,7 +38,7 @@ export default function Navbar() {
             alt="Ellas Lideran Santa Fe"
             width={140}
             height={56}
-            className="h-9 w-auto"
+            className={`h-9 w-auto ${scrolled ? "mix-blend-multiply" : "mix-blend-screen"}`}
             priority
           />
         </a>

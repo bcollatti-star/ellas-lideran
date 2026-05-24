@@ -25,7 +25,7 @@ export default function FooterSection() {
                 alt="Ellas Lideran Santa Fe"
                 width={160}
                 height={64}
-                className="h-10 w-auto"
+                className="h-10 w-auto mix-blend-screen"
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
