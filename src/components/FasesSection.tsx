@@ -20,7 +20,7 @@ const fases = [
     icon: Vote,
     title: "Votación",
     description:
-      "Las 100 preseleccionadas pasan a la etapa de votación. El público elige a 20 mujeres y el jurado especializado selecciona a 30 más, formando a las 50 líderes finales del reconocimiento.",
+      "Las 100 preseleccionadas pasan a la etapa de votación. El público elige a 25 mujeres y el jurado especializado selecciona a 25 más, formando a las 50 líderes finales del reconocimiento.",
   },
 ];
 

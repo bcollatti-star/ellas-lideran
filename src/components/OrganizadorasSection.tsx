@@ -107,7 +107,16 @@ export default function OrganizadorasSection() {
               </div>
               <div>
                 <p className="text-white font-semibold">Equipo Fundación Pensar</p>
-                <p className="text-white/40 text-sm">Santa Fe</p>
+                <p className="text-white/40 text-sm mb-3">Santa Fe</p>
+                <a
+                  href="https://instagram.com/fpsantafe"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-gold/70 text-sm hover:text-gold transition-colors"
+                >
+                  <InstagramIcon size={14} />
+                  @fpsantafe
+                </a>
               </div>
             </div>
           </div>
