@@ -49,7 +49,7 @@ export default function SponsorsSection() {
                     alt={name}
                     width={64}
                     height={64}
-                    className="object-contain w-full h-full p-1"
+                    className="object-contain w-full h-full p-1 mix-blend-multiply"
                   />
                 </div>
                 <div className="text-center">
