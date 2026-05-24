@@ -58,7 +58,7 @@ export default function SobreSection() {
         <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-gold/20 rounded-3xl overflow-hidden shadow-sm">
           {[
             { value: "50", label: "Mujeres reconocidas", sub: "líderes de la provincia" },
-            { value: "100", label: "Preseleccionadas", sub: "elegidas por la organización" },
+            { value: "100", label: "Preseleccionadas", sub: "de todo Santa Fe" },
             { value: "+1000", label: "Postuladas", sub: "en la edición 2026" },
             { value: "12", label: "Ámbitos de liderazgo", sub: "sectores de la sociedad" },
           ].map(({ value, label, sub }) => (
