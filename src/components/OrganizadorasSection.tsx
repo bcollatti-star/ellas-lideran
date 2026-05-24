@@ -1,3 +1,4 @@
+import Image from "next/image";
 import InstagramIcon from "@/components/InstagramIcon";
 
 const organizadoras = [
@@ -5,12 +6,14 @@ const organizadoras = [
     name: "Roxana Wolojviansky",
     handle: "@roxytips.ok",
     role: "Co-creadora y organizadora",
+    photo: "/roxana-wolojviansky.png",
     initials: "RW",
   },
   {
     name: "Roxana Di Carlo",
     handle: "@roxana.dicarlo",
     role: "Co-creadora y organizadora",
+    photo: "/roxana-dicarlo.png",
     initials: "RD",
   },
 ];
@@ -56,28 +59,36 @@ export default function OrganizadorasSection() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            {organizadoras.map(({ name, handle, role, initials }) => (
+            {organizadoras.map(({ name, handle, role, photo, initials }) => (
               <div
                 key={name}
-                className="group flex flex-col items-center text-center bg-white/5 border border-white/10 hover:border-gold/40 rounded-3xl p-8 transition-all duration-300"
+                className="group flex flex-col items-center text-center bg-white/5 border border-white/10 hover:border-gold/40 rounded-3xl overflow-hidden transition-all duration-300"
               >
-                {/* Avatar */}
-                <div className="w-20 h-20 rounded-full bg-gold/20 border-2 border-gold/40 flex items-center justify-center mb-5">
-                  <span className="font-display text-2xl font-bold text-gold">{initials}</span>
+                {/* Photo */}
+                <div className="relative w-full aspect-[3/4] overflow-hidden">
+                  <Image
+                    src={photo}
+                    alt={name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-charcoal/80 to-transparent" />
                 </div>
 
-                <h3 className="font-display text-xl font-bold text-white mb-1">{name}</h3>
-                <p className="text-white/40 text-sm mb-4">{role}</p>
-
-                <a
-                  href={`https://instagram.com/${handle.replace("@", "")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-gold/70 text-sm hover:text-gold transition-colors"
-                >
-                  <InstagramIcon size={14} />
-                  {handle}
-                </a>
+                {/* Info */}
+                <div className="p-6">
+                  <h3 className="font-display text-xl font-bold text-white mb-1">{name}</h3>
+                  <p className="text-white/40 text-sm mb-4">{role}</p>
+                  <a
+                    href={`https://instagram.com/${handle.replace("@", "")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-1.5 text-gold/70 text-sm hover:text-gold transition-colors"
+                  >
+                    <InstagramIcon size={14} />
+                    {handle}
+                  </a>
+                </div>
               </div>
             ))}
           </div>
@@ -122,11 +133,7 @@ export default function OrganizadorasSection() {
               >
                 <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-3">
                   <span className="font-display text-sm font-bold text-gold">
-                    {name
-                      .split(" ")
-                      .slice(0, 2)
-                      .map((n) => n[0])
-                      .join("")}
+                    {name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
                   </span>
                 </div>
                 <p className="text-charcoal font-medium text-sm leading-snug">{name}</p>

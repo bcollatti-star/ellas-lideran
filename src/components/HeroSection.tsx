@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { MapPin, Calendar } from "lucide-react";
 import InstagramIcon from "@/components/InstagramIcon";
 
@@ -11,7 +12,6 @@ export default function HeroSection() {
           "radial-gradient(ellipse at 80% 20%, rgba(196,151,42,0.18) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(123,94,167,0.12) 0%, transparent 55%), #1C1C1C",
       }}
     >
-      {/* Decorative grid lines */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -20,49 +20,47 @@ export default function HeroSection() {
           backgroundSize: "80px 80px",
         }}
       />
-
-      {/* Top accent bar */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
         {/* Date badge */}
         <div className="inline-flex items-center gap-2 border border-gold/60 text-gold text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-10">
           <Calendar size={13} />
-          09 de Marzo · 2026
+          09 de Marzo · 2027
         </div>
 
-        {/* Main heading */}
-        <h1 className="font-display text-white mb-4 leading-tight">
-          <span className="block text-5xl sm:text-7xl md:text-8xl font-bold">Ellas</span>
-          <span className="block text-5xl sm:text-7xl md:text-8xl font-bold italic text-gold">
-            Lideran
-          </span>
-        </h1>
+        {/* Logo */}
+        <div className="flex justify-center mb-4">
+          <Image
+            src="/logo-ellas-lideran-white.png"
+            alt="Ellas Lideran Santa Fe"
+            width={480}
+            height={220}
+            className="w-auto max-w-xs sm:max-w-sm md:max-w-md"
+            priority
+          />
+        </div>
 
         <p className="text-sm tracking-[0.3em] uppercase text-gold-light mb-8 font-medium">
           Santa Fe
         </p>
 
-        {/* Divider */}
         <div className="flex items-center justify-center gap-4 mb-8">
           <div className="h-px w-16 bg-gold/40" />
           <div className="w-1.5 h-1.5 rounded-full bg-gold" />
           <div className="h-px w-16 bg-gold/40" />
         </div>
 
-        {/* Subtitle */}
         <p className="text-white/80 text-lg sm:text-xl max-w-2xl mx-auto mb-4 leading-relaxed font-light">
           El reconocimiento provincial a mujeres santafesinas
           <br className="hidden sm:block" /> que transforman la provincia.
         </p>
 
-        {/* Location */}
         <div className="flex items-center justify-center gap-1.5 text-white/50 text-sm mb-12">
           <MapPin size={14} className="text-gold/70" />
-          <span>Fundación Pensar · Pellegrini 1780, Rosario, Santa Fe</span>
+          <span>Salón Metropolitano · Rosario, Santa Fe</span>
         </div>
 
-        {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#inscripcion"
@@ -78,11 +76,12 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Stats row */}
-        <div className="mt-20 grid grid-cols-3 gap-8 max-w-md mx-auto border-t border-white/10 pt-10">
+        {/* Stats */}
+        <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-xl mx-auto border-t border-white/10 pt-10">
           {[
             { value: "50", label: "Mujeres líderes" },
             { value: "100", label: "Preseleccionadas" },
+            { value: "+1000", label: "Postuladas" },
             { value: "12", label: "Ámbitos" },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">
@@ -93,7 +92,6 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Instagram handle */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center">
         <a
           href="https://instagram.com/ellaslideransantafe"
@@ -106,7 +104,6 @@ export default function HeroSection() {
         </a>
       </div>
 
-      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cream to-transparent" />
     </section>
   );

@@ -19,7 +19,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Ellas Lideran Santa Fe | Reconocimiento a Mujeres Líderes",
   description:
-    "El reconocimiento provincial a 50 mujeres santafesinas que transforman la provincia. 09 de Marzo 2026 | Fundación Pensar, Rosario, Santa Fe.",
+    "El reconocimiento provincial a 50 mujeres santafesinas que transforman la provincia. 09 de Marzo 2027 | Salón Metropolitano, Rosario, Santa Fe.",
   keywords: "Ellas Lideran, Santa Fe, mujeres líderes, reconocimiento, Rosario, liderazgo femenino",
   openGraph: {
     title: "Ellas Lideran Santa Fe",

@@ -57,7 +57,7 @@ export default function AgendaSection() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4">
-            9 de marzo 2026
+            9 de marzo 2027
           </p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-charcoal">
             Agenda del <span className="italic text-gold">evento</span>
