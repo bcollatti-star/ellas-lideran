@@ -57,6 +57,14 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="/postular"
+            className={`text-sm font-medium tracking-wide transition-colors duration-300 hover:text-gold ${
+              scrolled ? "text-charcoal/80" : "text-white/90"
+            }`}
+          >
+            Postular
+          </a>
+          <a
             href="#inscripcion"
             className="ml-2 px-5 py-2 bg-gold text-white text-sm font-semibold rounded-full hover:bg-gold-dark transition-colors duration-200"
           >
@@ -105,11 +113,24 @@ export default function Navbar() {
             </a>
           ))}
           <a
+            href="/postular"
+            onClick={() => setOpen(false)}
+            className="text-charcoal/80 font-medium py-2 hover:text-gold transition-colors border-b border-gold/10"
+            style={{
+              transitionDelay: open ? `${links.length * 40}ms` : "0ms",
+              opacity: open ? 1 : 0,
+              transform: open ? "translateX(0)" : "translateX(-8px)",
+              transition: "color 0.2s, opacity 0.3s ease, transform 0.3s ease",
+            }}
+          >
+            Postular
+          </a>
+          <a
             href="#inscripcion"
             onClick={() => setOpen(false)}
             className="mt-3 px-5 py-2.5 bg-gold text-white text-sm font-semibold rounded-full text-center hover:bg-gold-dark transition-colors"
             style={{
-              transitionDelay: open ? `${links.length * 40}ms` : "0ms",
+              transitionDelay: open ? `${(links.length + 1) * 40}ms` : "0ms",
               opacity: open ? 1 : 0,
               transform: open ? "translateY(0)" : "translateY(8px)",
               transition: "background-color 0.2s, opacity 0.3s ease, transform 0.3s ease",
