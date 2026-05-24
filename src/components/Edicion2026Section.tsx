@@ -66,12 +66,13 @@ export default function Edicion2026Section() {
             </div>
 
             {/* Highlights */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
               {[
-                { value: "50", label: "Mujeres reconocidas" },
+                { value: "100", label: "Mujeres reconocidas" },
                 { value: "+1000", label: "Postuladas recibidas" },
                 { value: "12", label: "Ámbitos de liderazgo" },
                 { value: "1", label: "Noche histórica" },
+                { value: "11", label: "Menciones especiales" },
               ].map(({ value, label }) => (
                 <div
                   key={label}

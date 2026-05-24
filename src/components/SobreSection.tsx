@@ -54,21 +54,6 @@ export default function SobreSection() {
           </div>
         </div>
 
-        {/* Stats bar — 4 columns */}
-        <div className="mt-20 grid grid-cols-2 sm:grid-cols-4 gap-px bg-gold/20 rounded-3xl overflow-hidden shadow-sm">
-          {[
-            { value: "50", label: "Mujeres reconocidas", sub: "líderes de la provincia" },
-            { value: "100", label: "Preseleccionadas", sub: "de todo Santa Fe" },
-            { value: "+1000", label: "Postuladas", sub: "en la edición 2026" },
-            { value: "12", label: "Ámbitos de liderazgo", sub: "sectores de la sociedad" },
-          ].map(({ value, label, sub }) => (
-            <div key={label} className="bg-white px-6 py-10 text-center">
-              <p className="font-display text-4xl font-bold text-gold">{value}</p>
-              <p className="font-semibold text-charcoal mt-2 text-sm">{label}</p>
-              <p className="text-charcoal/50 text-xs mt-1">{sub}</p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
