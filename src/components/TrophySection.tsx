@@ -27,9 +27,14 @@ export default function TrophySection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scale = 0.35 + progress * 0.65;
-  const blur = (1 - progress) * 6;
-  const trophyOpacity = 0.2 + progress * 0.8;
+  const scale = 0.3 + progress * 0.7;
+  const blur = (1 - progress) * 5;
+  const trophyOpacity = 0.15 + progress * 0.85;
+
+  // 3D rotation: starts tilted, straightens as progress increases
+  const rotateY = (1 - progress) * -35;
+  const rotateX = (1 - progress) * 18;
+  const rotateZ = (1 - progress) * 8;
 
   // Text lines appear sequentially in the last 40% of scroll
   const textProgress = Math.max(0, (progress - 0.55) / 0.45);
@@ -45,22 +50,26 @@ export default function TrophySection() {
       >
         {/* Trophy */}
         <div
+          style={{ perspective: "900px" }}
           className="relative z-10"
-          style={{
-            transform: `scale(${scale})`,
-            opacity: trophyOpacity,
-            filter: `blur(${blur}px)`,
-            willChange: "transform, opacity, filter",
-          }}
         >
-          <Image
-            src="/trofeo.png"
-            alt="Trofeo Ellas Lideran"
-            width={380}
-            height={380}
-            className="w-48 sm:w-64 md:w-80 h-auto drop-shadow-2xl"
-            priority
-          />
+          <div
+            style={{
+              transform: `scale(${scale}) rotateY(${rotateY}deg) rotateX(${rotateX}deg) rotateZ(${rotateZ}deg)`,
+              opacity: trophyOpacity,
+              filter: `blur(${blur}px)`,
+              willChange: "transform, opacity, filter",
+            }}
+          >
+            <Image
+              src="/trofeo.png"
+              alt="Trofeo Ellas Lideran"
+              width={500}
+              height={500}
+              className="w-64 sm:w-80 md:w-[420px] h-auto drop-shadow-2xl"
+              priority
+            />
+          </div>
         </div>
 
         {/* Text lines */}
