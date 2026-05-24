@@ -94,6 +94,9 @@ export default function FooterSection() {
               <p className="text-white/60 text-sm">
                 Roxana Wolojviansky · Roxana Di Carlo
               </p>
+              <p className="text-white/40 text-sm mt-1">
+                Equipo Fundación Pensar Santa Fe
+              </p>
             </div>
           </div>
         </div>
