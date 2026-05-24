@@ -1,5 +1,6 @@
 import Image from "next/image";
 import InstagramIcon from "@/components/InstagramIcon";
+import FadeIn from "@/components/FadeIn";
 
 const organizadoras = [
   {
@@ -59,9 +60,9 @@ export default function OrganizadorasSection() {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            {organizadoras.map(({ name, handle, role, photo, initials }) => (
+            {organizadoras.map(({ name, handle, role, photo, initials }, i) => (
+              <FadeIn key={name} delay={i * 120} direction="up">
               <div
-                key={name}
                 className="group flex flex-col items-center text-center bg-white/5 border border-white/10 hover:border-gold/40 rounded-3xl overflow-hidden transition-all duration-300"
               >
                 {/* Photo */}
@@ -90,10 +91,12 @@ export default function OrganizadorasSection() {
                   </a>
                 </div>
               </div>
+              </FadeIn>
             ))}
           </div>
 
           {/* Fundación Pensar */}
+          <FadeIn delay={250}>
           <div className="mt-12 flex justify-center">
             <div className="flex items-center gap-5 bg-white/5 border border-white/10 rounded-3xl px-8 py-5">
               <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
@@ -120,8 +123,10 @@ export default function OrganizadorasSection() {
               </div>
             </div>
           </div>
+          </FadeIn>
 
           {/* Tagline */}
+          <FadeIn delay={100}>
           <div className="text-center mt-16 border-t border-white/10 pt-12">
             <p className="font-display text-2xl sm:text-3xl text-white/80 italic">
               "50 mujeres. 1 provincia.
@@ -130,6 +135,7 @@ export default function OrganizadorasSection() {
               Un legado que inspira a miles."
             </p>
           </div>
+          </FadeIn>
         </div>
       </section>
 

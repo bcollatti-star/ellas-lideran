@@ -1,4 +1,5 @@
 import { Clock } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 const agenda = [
   {
@@ -55,6 +56,7 @@ export default function AgendaSection() {
   return (
     <section id="agenda" className="bg-cream py-24 px-6">
       <div className="max-w-4xl mx-auto">
+        <FadeIn>
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4">
             9 de marzo 2027
@@ -72,14 +74,16 @@ export default function AgendaSection() {
             <span className="font-semibold text-charcoal">Analía Bocassi</span>
           </p>
         </div>
+        </FadeIn>
 
         <div className="relative">
           {/* Vertical line */}
           <div className="absolute left-[52px] sm:left-[72px] top-0 bottom-0 w-px bg-gold/20" />
 
           <div className="space-y-4">
-            {agenda.map(({ time, title, description, highlight }) => (
-              <div key={time} className="relative flex gap-6 sm:gap-10">
+            {agenda.map(({ time, title, description, highlight }, i) => (
+              <FadeIn key={time} delay={i * 60} direction="left">
+              <div className="relative flex gap-6 sm:gap-10">
                 {/* Time */}
                 <div className="flex-shrink-0 w-24 sm:w-28 text-right">
                   <span className="font-display text-sm font-semibold text-gold">{time}</span>
@@ -115,6 +119,7 @@ export default function AgendaSection() {
                   <p className="text-charcoal/50 text-sm leading-relaxed">{description}</p>
                 </div>
               </div>
+              </FadeIn>
             ))}
           </div>
         </div>

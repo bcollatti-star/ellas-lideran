@@ -1,4 +1,5 @@
 import { Star, Eye, Network, TrendingUp } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 const propósitos = [
   { icon: Star, text: "Inspirar a nuevas generaciones de mujeres líderes." },
@@ -12,7 +13,7 @@ export default function SobreSection() {
     <section id="sobre" className="bg-cream py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
-          <div>
+          <FadeIn direction="left">
             <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-4">
               Sobre el Evento
             </p>
@@ -32,28 +33,28 @@ export default function SobreSection() {
               diversidad, visibilizando el talento y la fuerza transformadora de mujeres en todo el
               territorio provincial.
             </p>
-          </div>
+          </FadeIn>
 
           <div>
-            <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-6">
-              Propósito
-            </p>
+            <FadeIn delay={100}>
+              <p className="text-gold text-xs tracking-[0.3em] uppercase font-semibold mb-6">
+                Propósito
+              </p>
+            </FadeIn>
             <div className="space-y-5">
-              {propósitos.map(({ icon: Icon, text }) => (
-                <div
-                  key={text}
-                  className="flex gap-4 items-start bg-white rounded-2xl px-5 py-4 shadow-sm border border-gold/10"
-                >
-                  <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Icon size={16} className="text-gold" />
+              {propósitos.map(({ icon: Icon, text }, i) => (
+                <FadeIn key={text} delay={150 + i * 80} direction="right">
+                  <div className="flex gap-4 items-start bg-white rounded-2xl px-5 py-4 shadow-sm border border-gold/10">
+                    <div className="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Icon size={16} className="text-gold" />
+                    </div>
+                    <p className="text-charcoal/80 leading-relaxed">{text}</p>
                   </div>
-                  <p className="text-charcoal/80 leading-relaxed">{text}</p>
-                </div>
+                </FadeIn>
               ))}
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
