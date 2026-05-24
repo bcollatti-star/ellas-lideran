@@ -25,7 +25,7 @@ export default function FooterSection() {
                 alt="Ellas Lideran Santa Fe"
                 width={160}
                 height={64}
-                className="h-10 w-auto mix-blend-screen"
+                className="h-10 w-auto"
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-xs">
@@ -93,6 +93,9 @@ export default function FooterSection() {
               <p className="text-white/30 text-xs mb-2">Creado y organizado por</p>
               <p className="text-white/60 text-sm">
                 Roxana Wolojviansky · Roxana Di Carlo
+              </p>
+              <p className="text-white/40 text-sm mt-1">
+                Equipo Fundación Pensar Santa Fe
               </p>
             </div>
           </div>
