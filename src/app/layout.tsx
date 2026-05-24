@@ -17,14 +17,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ellaslideransantafe.com.ar"),
   title: "Ellas Lideran Santa Fe | Reconocimiento a Mujeres Líderes",
   description:
     "El reconocimiento provincial a 50 mujeres santafesinas que transforman la provincia. 09 de Marzo 2027 | Salón Metropolitano, Rosario, Santa Fe.",
   keywords: "Ellas Lideran, Santa Fe, mujeres líderes, reconocimiento, Rosario, liderazgo femenino",
   openGraph: {
     title: "Ellas Lideran Santa Fe",
-    description: "El reconocimiento provincial a mujeres santafesinas que transforman la provincia.",
+    description: "El reconocimiento provincial a 50 mujeres santafesinas que transforman la provincia. 9 de Marzo 2027 · Salón Metropolitano, Rosario.",
     type: "website",
+    images: [
+      {
+        url: "/open-graph.png",
+        width: 1200,
+        height: 630,
+        alt: "Ellas Lideran Santa Fe 2027",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ellas Lideran Santa Fe",
+    description: "El reconocimiento provincial a 50 mujeres santafesinas que transforman la provincia.",
+    images: ["/open-graph.png"],
   },
 };
 

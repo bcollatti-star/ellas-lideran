@@ -8,6 +8,8 @@ import Edicion2026Section from "@/components/Edicion2026Section";
 import OrganizadorasSection from "@/components/OrganizadorasSection";
 import AgendaSection from "@/components/AgendaSection";
 import MapSection from "@/components/MapSection";
+import GaleriaSection from "@/components/GaleriaSection";
+import PrensaSection from "@/components/PrensaSection";
 import SponsorsSection from "@/components/SponsorsSection";
 import InscripcionSection from "@/components/InscripcionSection";
 import FooterSection from "@/components/FooterSection";
@@ -24,6 +26,8 @@ export default function Home() {
         <AmbitosSection />
         <FasesSection />
         <Edicion2026Section />
+        <GaleriaSection />
+        <PrensaSection />
         <OrganizadorasSection />
         <AgendaSection />
         <MapSection />
