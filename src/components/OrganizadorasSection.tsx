@@ -93,6 +93,25 @@ export default function OrganizadorasSection() {
             ))}
           </div>
 
+          {/* Fundación Pensar */}
+          <div className="mt-12 flex justify-center">
+            <div className="flex items-center gap-5 bg-white/5 border border-white/10 rounded-3xl px-8 py-5">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center overflow-hidden flex-shrink-0">
+                <Image
+                  src="/logo-fp.png"
+                  alt="Fundación Pensar Santa Fe"
+                  width={56}
+                  height={56}
+                  className="object-contain w-full h-full p-1 mix-blend-screen"
+                />
+              </div>
+              <div>
+                <p className="text-white font-semibold">Equipo Fundación Pensar</p>
+                <p className="text-white/40 text-sm">Santa Fe</p>
+              </div>
+            </div>
+          </div>
+
           {/* Tagline */}
           <div className="text-center mt-16 border-t border-white/10 pt-12">
             <p className="font-display text-2xl sm:text-3xl text-white/80 italic">

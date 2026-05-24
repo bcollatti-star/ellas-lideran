@@ -1,9 +1,4 @@
 import { Mail } from "lucide-react";
-import Image from "next/image";
-
-const partners = [
-  { name: "Fundación Pensar", type: "Venue & Partner institucional", initials: "FP" },
-];
 
 const placeholders = [
   { label: "Sponsor Oro", spots: 2 },
@@ -30,35 +25,6 @@ export default function SponsorsSection() {
           <p className="text-charcoal/60 mt-6 max-w-lg mx-auto">
             Empresas y organizaciones que hacen posible celebrar el liderazgo femenino en Santa Fe.
           </p>
-        </div>
-
-        {/* Confirmed partners */}
-        <div className="mb-14">
-          <p className="text-center text-charcoal/40 text-xs tracking-widest uppercase mb-8">
-            Partner institucional
-          </p>
-          <div className="flex justify-center">
-            {partners.map(({ name, type, initials }) => (
-              <div
-                key={name}
-                className="flex flex-col items-center gap-3 bg-gold/5 border border-gold/30 rounded-3xl px-12 py-8"
-              >
-                <div className="w-16 h-16 rounded-2xl bg-gold/20 flex items-center justify-center overflow-hidden">
-                  <Image
-                    src="/logo-fp.png"
-                    alt={name}
-                    width={64}
-                    height={64}
-                    className="object-contain w-full h-full p-1 mix-blend-multiply"
-                  />
-                </div>
-                <div className="text-center">
-                  <p className="font-semibold text-charcoal">{name}</p>
-                  <p className="text-charcoal/50 text-xs mt-0.5">{type}</p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Sponsor tiers */}
