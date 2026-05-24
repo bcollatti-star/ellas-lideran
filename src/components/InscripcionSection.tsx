@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { Send, CheckCircle } from "lucide-react";
+import { Send, CheckCircle, AlertCircle } from "lucide-react";
 
 const categorias = [
   "Educación",
@@ -44,18 +44,40 @@ export default function InscripcionSection() {
   const [form, setForm] = useState<FormData>(initial);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   const set = (field: keyof FormData) => (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => setForm((f) => ({ ...f, [field]: e.target.value }));
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
+    setError(false);
+    try {
+      const res = await fetch("https://formspree.io/f/xlgvwgyl", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          nombre: form.nombre,
+          apellido: form.apellido,
+          email: form.email,
+          telefono: form.telefono,
+          organizacion: form.organizacion,
+          tipo: form.tipo,
+          categoria: form.categoria,
+        }),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
       setLoading(false);
-      setSubmitted(true);
-    }, 1200);
+    }
   };
 
   const inputClass =
@@ -222,6 +244,12 @@ export default function InscripcionSection() {
               )}
             </button>
 
+            {error && (
+              <div className="flex items-center justify-center gap-2 mt-4 text-white/80 text-sm">
+                <AlertCircle size={15} />
+                Hubo un error al enviar. Intentá de nuevo.
+              </div>
+            )}
             <p className="text-white/40 text-xs text-center mt-4">
               Al enviar aceptás recibir información sobre el evento.
             </p>
