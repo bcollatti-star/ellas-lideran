@@ -6,14 +6,14 @@ const organizadoras = [
     name: "Roxana Wolojviansky",
     handle: "@roxytips.ok",
     role: "Co-creadora y organizadora",
-    photo: "/roxana-wolojviansky.jpg",
+    photo: "/roxana-wolojviansky.png",
     initials: "RW",
   },
   {
     name: "Roxana Di Carlo",
     handle: "@roxana.dicarlo",
     role: "Co-creadora y organizadora",
-    photo: "/roxana-dicarlo.jpg",
+    photo: "/roxana-dicarlo.png",
     initials: "RD",
   },
 ];
