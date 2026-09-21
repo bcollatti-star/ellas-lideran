@@ -27,7 +27,7 @@ export default function HeroSection() {
         {/* Date badge */}
         <div className="inline-flex items-center gap-2 border border-gold/60 text-gold text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-8">
           <Calendar size={13} />
-          09 de Marzo · 2027
+          19 de Marzo · 2027
         </div>
 
         {/* Logo */}
@@ -55,7 +55,7 @@ export default function HeroSection() {
 
         <div className="flex items-center justify-center gap-1.5 text-white/50 text-sm mb-8">
           <MapPin size={14} className="text-gold/70" />
-          <span>Salón Metropolitano · Rosario, Santa Fe</span>
+          <span>La Fluvial · Rosario, Santa Fe</span>
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center w-full max-w-sm sm:max-w-none mb-10">
@@ -76,7 +76,7 @@ export default function HeroSection() {
         {/* Stats */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto border-t border-white/10 pt-8 mb-8">
           {[
-            { value: "50", label: "Mujeres líderes" },
+            { value: "100", label: "Mujeres líderes" },
             { value: "100", label: "Preseleccionadas" },
             { value: "+1000", label: "Postuladas" },
             { value: "12", label: "Ámbitos" },

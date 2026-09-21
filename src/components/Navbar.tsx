@@ -8,7 +8,6 @@ const links = [
   { label: "Sobre el Evento", href: "#sobre" },
   { label: "Ámbitos", href: "#ambitos" },
   { label: "Proceso", href: "#fases" },
-  { label: "Agenda", href: "#agenda" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
 ];

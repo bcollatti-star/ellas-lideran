@@ -6,7 +6,6 @@ import AmbitosSection from "@/components/AmbitosSection";
 import FasesSection from "@/components/FasesSection";
 import Edicion2026Section from "@/components/Edicion2026Section";
 import OrganizadorasSection from "@/components/OrganizadorasSection";
-import AgendaSection from "@/components/AgendaSection";
 import MapSection from "@/components/MapSection";
 import GaleriaSection from "@/components/GaleriaSection";
 import PrensaSection from "@/components/PrensaSection";
@@ -28,7 +27,6 @@ export default function Home() {
         <GaleriaSection />
         <PrensaSection />
         <OrganizadorasSection />
-        <AgendaSection />
         <MapSection />
         <SponsorsSection />
       </main>
