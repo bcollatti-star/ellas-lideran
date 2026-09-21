@@ -32,9 +32,9 @@ export default function OrganizadorasSection() {
               <div className="h-px w-20 bg-gold/30" />
             </div>
             <p className="text-charcoal/60 mt-6 max-w-lg mx-auto">
-              Un jurado especializado que seleccionó a 25 de las 100 mujeres líderes del reconocimiento.
+              Un jurado especializado que seleccionó a 25 de las 50 mujeres líderes del reconocimiento.
             </p>
-            <p className="text-gold/70 mt-3 text-sm font-medium italic">
+            <p className="text-gold mt-4 text-base font-semibold italic">
               Muy pronto conoceremos al comité de la nueva edición.
             </p>
           </div>

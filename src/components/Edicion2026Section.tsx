@@ -27,7 +27,7 @@ export default function Edicion2026Section() {
               <div className="h-px w-20 bg-gold/30" />
             </div>
             <p className="text-charcoal/60 mt-6 max-w-2xl mx-auto text-lg">
-              Revivimos la primera edición de Ellas Lideran, donde 50 mujeres santafesinas fueron
+              Revivimos la primera edición de Ellas Lideran, donde 100 mujeres santafesinas fueron
               reconocidas por transformar la provincia con su liderazgo, compromiso y visión.
             </p>
           </div>
@@ -60,7 +60,7 @@ export default function Edicion2026Section() {
                   Una noche que marcó historia
                 </h3>
                 <p className="text-charcoal/70 leading-relaxed mb-4">
-                  En la primera edición de Ellas Lideran, la provincia de Santa Fe celebró a 50 mujeres
+                  En la primera edición de Ellas Lideran, la provincia de Santa Fe celebró a 100 mujeres
                   extraordinarias que, desde sus distintos ámbitos, trabajan cada día para construir
                   una comunidad más justa, inclusiva y próspera.
                 </p>
