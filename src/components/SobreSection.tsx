@@ -24,7 +24,7 @@ export default function SobreSection() {
             <div className="w-12 h-0.5 bg-gold mb-8" />
             <p className="text-charcoal/70 text-lg leading-relaxed mb-6">
               Es un reconocimiento provincial que celebra a{" "}
-              <strong className="text-charcoal font-semibold">50 mujeres líderes santafesinas</strong>{" "}
+              <strong className="text-charcoal font-semibold">100 mujeres líderes santafesinas</strong>{" "}
               que se destacan por su compromiso, impacto y trayectoria en diversos ámbitos del
               desarrollo social, productivo y comunitario.
             </p>

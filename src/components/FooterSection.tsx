@@ -6,7 +6,6 @@ const navLinks = [
   { label: "Sobre el evento", href: "#sobre" },
   { label: "Ámbitos", href: "#ambitos" },
   { label: "Proceso", href: "#fases" },
-  { label: "Agenda", href: "#agenda" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
   { label: "Postular", href: "/postular" },
@@ -67,7 +66,7 @@ export default function FooterSection() {
               <div className="flex gap-3">
                 <MapPin size={16} className="text-gold flex-shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white/80 text-sm font-medium">Salón Metropolitano</p>
+                  <p className="text-white/80 text-sm font-medium">La Fluvial</p>
                   <p className="text-white/40 text-sm">Rosario, Santa Fe</p>
                 </div>
               </div>
@@ -76,7 +75,7 @@ export default function FooterSection() {
                   <span className="w-1 h-1 rounded-full bg-gold" />
                 </div>
                 <div>
-                  <p className="text-white/80 text-sm font-medium">09 de Marzo · 2027</p>
+                  <p className="text-white/80 text-sm font-medium">19 de Marzo · 2027</p>
                   <p className="text-white/40 text-sm">18:00 hs</p>
                 </div>
               </div>

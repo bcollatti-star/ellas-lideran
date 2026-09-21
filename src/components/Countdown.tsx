@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 function calcTimeLeft() {
-  const target = new Date("2027-03-09T18:00:00-03:00").getTime();
+  const target = new Date("2027-03-19T18:00:00-03:00").getTime();
   const diff = target - Date.now();
   if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
   return {

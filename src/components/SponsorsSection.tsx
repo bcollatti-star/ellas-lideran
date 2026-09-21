@@ -2,12 +2,6 @@ import { Mail } from "lucide-react";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
-const placeholders = [
-  { label: "Sponsor Oro", spots: 2 },
-  { label: "Sponsor Plata", spots: 3 },
-  { label: "Sponsor Bronce", spots: 4 },
-];
-
 export default function SponsorsSection() {
   return (
     <section id="sponsors" className="bg-white py-24 px-6">
@@ -46,27 +40,6 @@ export default function SponsorsSection() {
             </div>
           </div>
         </FadeIn>
-
-        {/* Sponsor tiers */}
-        <div className="grid sm:grid-cols-3 gap-6 mb-16">
-          {placeholders.map(({ label, spots }) => (
-            <div key={label} className="border border-dashed border-gold/30 rounded-3xl p-6">
-              <p className="text-gold/60 text-xs tracking-widest uppercase mb-4 text-center">
-                {label}
-              </p>
-              <div className="grid grid-cols-2 gap-3">
-                {Array.from({ length: spots }).map((_, i) => (
-                  <div
-                    key={i}
-                    className="aspect-video rounded-xl bg-cream border border-gold/10 flex items-center justify-center"
-                  >
-                    <span className="text-charcoal/20 text-xs">Tu marca</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
 
         {/* CTA */}
         <div className="text-center bg-charcoal rounded-3xl px-8 py-12">

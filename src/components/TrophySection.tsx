@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
 const lines = [
-  "50 mujeres.",
+  "100 mujeres.",
   "1 provincia.",
   "Un legado que inspira a miles.",
 ];
