@@ -45,7 +45,7 @@ export default function TrophySection() {
         className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 60%, rgba(196,151,42,0.12) 0%, transparent 65%), #1C1C1C",
+            "radial-gradient(ellipse at 50% 60%, rgba(218,169,37,0.14) 0%, transparent 65%), radial-gradient(ellipse at 20% 80%, rgba(62,47,82,0.18) 0%, transparent 50%), #1C1C1C",
         }}
       >
         {/* Trophy */}

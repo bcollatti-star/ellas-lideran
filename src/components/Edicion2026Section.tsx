@@ -9,7 +9,7 @@ export default function Edicion2026Section() {
       className="py-24 px-6"
       style={{
         background:
-          "radial-gradient(ellipse at 20% 60%, rgba(196,151,42,0.15) 0%, transparent 55%), radial-gradient(ellipse at 80% 30%, rgba(123,94,167,0.08) 0%, transparent 55%), #FAF7F0",
+          "radial-gradient(ellipse at 20% 60%, rgba(218,169,37,0.15) 0%, transparent 55%), radial-gradient(ellipse at 80% 30%, rgba(62,47,82,0.06) 0%, transparent 55%), #FAF6EC",
       }}
     >
       <div className="max-w-7xl mx-auto">
