@@ -74,7 +74,7 @@ export default function Edicion2026Section() {
                 {[
                   { value: "100", label: "Mujeres reconocidas" },
                   { value: "+1000", label: "Postuladas recibidas" },
-                  { value: "12", label: "Ámbitos de liderazgo" },
+                  { value: "11", label: "Ámbitos de liderazgo" },
                   { value: "1", label: "Noche histórica" },
                   { value: "11", label: "Menciones especiales" },
                 ].map(({ value, label }, i) => (
