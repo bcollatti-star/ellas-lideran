@@ -51,7 +51,7 @@ export default function TrophySection() {
         {/* Trophy */}
         <div
           style={{ perspective: "900px" }}
-          className="relative z-10"
+          className="relative z-10 -translate-y-12"
         >
           <div
             style={{

@@ -46,6 +46,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className={`${playfair.variable} ${inter.variable}`}>
+      <head>
+        <meta name="format-detection" content="telephone=no, address=no, email=no, date=no" />
+      </head>
       <body className="bg-white text-charcoal">{children}</body>
     </html>
   );
