@@ -106,6 +106,9 @@ export default function GaleriaSection() {
               <div className="w-1.5 h-1.5 rounded-full bg-gold" />
               <div className="h-px w-20 bg-gold/30" />
             </div>
+            <p className="text-charcoal/50 mt-4 text-sm">
+              9 de marzo 2026 · Salón Metropolitano Rosario
+            </p>
           </div>
         </FadeIn>
 
