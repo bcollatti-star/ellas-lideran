@@ -23,10 +23,10 @@ export default function HeroSection() {
       />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
-      {/* Gold organic curves — top right */}
+      {/* Gold organic curves — top right (hidden on mobile to avoid overlapping logo) */}
       <svg
         aria-hidden="true"
-        className="absolute top-0 right-0 w-72 h-72 sm:w-[400px] sm:h-[400px] pointer-events-none opacity-[0.28]"
+        className="hidden sm:block absolute top-0 right-0 w-72 h-72 sm:w-[400px] sm:h-[400px] pointer-events-none opacity-[0.28]"
         viewBox="0 0 400 400"
         fill="none"
       >
