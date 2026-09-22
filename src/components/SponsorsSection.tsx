@@ -11,7 +11,7 @@ export default function SponsorsSection() {
             Auspiciantes y aliados
           </p>
           <h2 className="font-display text-4xl sm:text-5xl font-bold text-charcoal">
-            Nuestros <span className="italic text-gold">sponsors</span>
+            Nuestros <span className="italic text-gold">sponsors</span> 2026
           </h2>
           <div className="flex items-center justify-center gap-4 mt-6">
             <div className="h-px w-20 bg-gold/30" />
@@ -27,7 +27,7 @@ export default function SponsorsSection() {
         <FadeIn direction="up">
           <div className="mb-16">
             <p className="text-center text-charcoal/40 text-xs tracking-[0.25em] uppercase font-semibold mb-8">
-              Quienes nos acompañaron en 2026
+              Quienes nos acompañaron en la primer edición
             </p>
             <div className="max-w-sm mx-auto rounded-3xl overflow-hidden shadow-md border border-gold/15">
               <Image

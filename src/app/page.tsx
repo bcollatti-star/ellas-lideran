@@ -27,8 +27,8 @@ export default function Home() {
         <GaleriaSection />
         <PrensaSection />
         <OrganizadorasSection />
-        <MapSection />
         <SponsorsSection />
+        <MapSection />
       </main>
       <FooterSection />
       <ScrollToTop />
