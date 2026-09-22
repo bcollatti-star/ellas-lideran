@@ -6,8 +6,10 @@ const navLinks = [
   { label: "Sobre el evento", href: "#sobre" },
   { label: "Ámbitos", href: "#ambitos" },
   { label: "Proceso", href: "#fases" },
+  { label: "Edición 2026", href: "#edicion2026" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
+  { label: "Fecha y lugar", href: "#lugar" },
   { label: "Postular", href: "/postular" },
 ];
 
@@ -76,7 +78,6 @@ export default function FooterSection() {
                 </div>
                 <div>
                   <p className="text-white/80 text-sm font-medium">19 de Marzo · 2027</p>
-                  <p className="text-white/40 text-sm">18:00 hs</p>
                 </div>
               </div>
               <div className="flex gap-3">
