@@ -8,8 +8,10 @@ const links = [
   { label: "Sobre el Evento", href: "#sobre" },
   { label: "Ámbitos", href: "#ambitos" },
   { label: "Proceso", href: "#fases" },
+  { label: "Edición 2026", href: "#edicion2026" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
+  { label: "Fecha y lugar", href: "#lugar" },
 ];
 
 export default function Navbar() {
@@ -43,7 +45,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5">
           {links.map((l) => (
             <a
               key={l.href}

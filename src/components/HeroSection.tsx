@@ -26,7 +26,7 @@ export default function HeroSection() {
       {/* Gold organic curves — top right (hidden on mobile to avoid overlapping logo) */}
       <svg
         aria-hidden="true"
-        className="hidden sm:block absolute top-0 right-0 w-72 h-72 sm:w-[400px] sm:h-[400px] pointer-events-none opacity-[0.28]"
+        className="absolute top-0 right-0 w-28 h-28 sm:w-72 sm:h-72 md:w-[400px] md:h-[400px] pointer-events-none opacity-[0.28] z-0"
         viewBox="0 0 400 400"
         fill="none"
       >

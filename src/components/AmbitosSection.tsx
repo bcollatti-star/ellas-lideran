@@ -19,14 +19,14 @@ export default function AmbitosSection() {
   return (
     <section id="ambitos" className="bg-white py-24 px-6 relative overflow-hidden">
       {/* Gold organic curves — top right */}
-      <svg aria-hidden="true" className="hidden sm:block absolute top-0 right-0 w-64 h-64 sm:w-80 sm:h-80 pointer-events-none opacity-[0.18] z-0" viewBox="0 0 320 320" fill="none">
+      <svg aria-hidden="true" className="absolute top-0 right-0 w-24 h-24 sm:w-64 sm:h-64 md:w-80 md:h-80 pointer-events-none opacity-[0.18] z-0" viewBox="0 0 320 320" fill="none">
         <path d="M320 0 C260 65 190 105 145 195 C100 285 50 310 0 320" stroke="#C6A24C" strokeWidth="1.5"/>
         <path d="M320 50 C268 108 205 145 165 228 C125 311 78 335 22 320" stroke="#C6A24C" strokeWidth="1"/>
         <path d="M320 100 C276 150 220 188 185 262 C150 336 108 355 55 320" stroke="#DAA925" strokeWidth="0.7"/>
       </svg>
 
       {/* Lavender botanical — bottom left */}
-      <svg aria-hidden="true" className="hidden sm:block absolute bottom-0 left-0 w-28 h-48 sm:w-36 sm:h-56 pointer-events-none z-0" viewBox="0 0 90 200" fill="none">
+      <svg aria-hidden="true" className="absolute bottom-0 left-0 w-16 h-28 sm:w-28 sm:h-48 md:w-36 md:h-56 pointer-events-none z-0" viewBox="0 0 90 200" fill="none">
         <line x1="18" y1="200" x2="16" y2="75" stroke="#C7AD79" strokeWidth="1" opacity="0.45"/>
         <line x1="45" y1="200" x2="45" y2="80" stroke="#C7AD79" strokeWidth="1" opacity="0.38"/>
         <line x1="72" y1="200" x2="74" y2="85" stroke="#C7AD79" strokeWidth="1" opacity="0.40"/>

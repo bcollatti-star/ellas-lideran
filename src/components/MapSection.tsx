@@ -3,7 +3,7 @@ import FadeIn from "@/components/FadeIn";
 
 export default function MapSection() {
   return (
-    <section className="bg-white py-24 px-6">
+    <section id="lugar" className="bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
