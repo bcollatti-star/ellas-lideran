@@ -10,7 +10,7 @@ export default function HeroSection() {
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at 80% 20%, rgba(196,151,42,0.18) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(123,94,167,0.12) 0%, transparent 55%), #1C1C1C",
+          "radial-gradient(ellipse at 80% 20%, rgba(218,169,37,0.18) 0%, transparent 55%), radial-gradient(ellipse at 20% 80%, rgba(62,47,82,0.25) 0%, transparent 55%), #1C1C1C",
       }}
     >
       <div
