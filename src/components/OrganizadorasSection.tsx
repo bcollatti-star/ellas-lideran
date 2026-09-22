@@ -1,5 +1,12 @@
 import FadeIn from "@/components/FadeIn";
 
+const SKIP_PREFIXES = ["Maria", "María"];
+const getInitials = (name: string) => {
+  const parts = name.split(" ");
+  const effective = SKIP_PREFIXES.includes(parts[0]) ? parts.slice(1) : parts;
+  return effective.slice(0, 2).map((n) => n[0].toUpperCase()).join("");
+};
+
 const jurado = [
   "Alejandro Darío Distefano",
   "Carolina Rovetto",
@@ -73,7 +80,7 @@ export default function OrganizadorasSection() {
               >
                 <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center mb-3">
                   <span className="font-display text-sm font-bold text-gold">
-                    {name.split(" ").slice(0, 2).map((n) => n[0]).join("")}
+                    {getInitials(name)}
                   </span>
                 </div>
                 <p className="text-charcoal font-medium text-sm leading-snug">{name}</p>

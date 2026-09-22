@@ -60,7 +60,7 @@ export default function SponsorsSection() {
         <div className="text-center bg-charcoal rounded-3xl px-8 py-12">
           <p className="font-display text-2xl font-bold text-white mb-2">
             ¿Querés ser parte de{" "}
-            <span className="italic text-gold">Ellas Lideran?</span>
+            <span className="italic text-gold">Ellas Lideran 2027?</span>
           </p>
           <p className="text-white/50 mb-8 max-w-md mx-auto">
             Sumá tu marca a un evento que celebra el liderazgo femenino y el impacto social en Santa Fe.

@@ -76,7 +76,6 @@ export default function FooterSection() {
                 </div>
                 <div>
                   <p className="text-white/80 text-sm font-medium">19 de Marzo · 2027</p>
-                  <p className="text-white/40 text-sm">18:00 hs</p>
                 </div>
               </div>
               <div className="flex gap-3">
