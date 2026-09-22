@@ -19,14 +19,14 @@ export default function OrganizadorasSection() {
       {/* Jurado */}
       <section id="jurado" className="bg-white py-24 px-6 relative overflow-hidden">
         {/* Gold curves — top right */}
-        <svg aria-hidden="true" className="absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-[0.15]" viewBox="0 0 300 300" fill="none">
+        <svg aria-hidden="true" className="hidden sm:block absolute top-0 right-0 w-72 h-72 pointer-events-none opacity-[0.15] z-0" viewBox="0 0 300 300" fill="none">
           <path d="M300 0 C240 60 175 100 135 185 C95 270 55 295 0 300" stroke="#C6A24C" strokeWidth="1.5"/>
           <path d="M300 55 C248 108 190 145 155 222 C120 299 82 320 28 300" stroke="#C6A24C" strokeWidth="1"/>
           <path d="M300 110 C255 158 205 195 175 262 C145 329 110 344 58 300" stroke="#DAA925" strokeWidth="0.7"/>
         </svg>
 
         {/* Lavender botanical — bottom left */}
-        <svg aria-hidden="true" className="absolute bottom-0 left-8 w-24 h-44 pointer-events-none" viewBox="0 0 75 170" fill="none">
+        <svg aria-hidden="true" className="hidden sm:block absolute bottom-0 left-8 w-24 h-44 pointer-events-none z-0" viewBox="0 0 75 170" fill="none">
           <line x1="15" y1="170" x2="13" y2="65" stroke="#C7AD79" strokeWidth="1" opacity="0.4"/>
           <line x1="38" y1="170" x2="38" y2="70" stroke="#C7AD79" strokeWidth="1" opacity="0.35"/>
           <line x1="60" y1="170" x2="62" y2="75" stroke="#C7AD79" strokeWidth="1" opacity="0.38"/>
