@@ -10,7 +10,17 @@ const propósitos = [
 
 export default function SobreSection() {
   return (
-    <section id="sobre" className="bg-cream py-24 px-6">
+    <section id="sobre" className="bg-cream py-24 px-6 relative overflow-hidden">
+      {/* Gold organic curves — top left accent */}
+      <svg
+        aria-hidden="true"
+        className="absolute top-0 left-0 w-48 h-48 pointer-events-none opacity-20"
+        viewBox="0 0 200 200"
+        fill="none"
+      >
+        <path d="M0 0 C50 40 90 80 120 140 C150 200 180 200 200 200" stroke="#C6A24C" strokeWidth="1.2"/>
+        <path d="M0 40 C40 70 75 105 100 160 C125 215 155 210 190 200" stroke="#C6A24C" strokeWidth="0.8"/>
+      </svg>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <FadeIn direction="left">
