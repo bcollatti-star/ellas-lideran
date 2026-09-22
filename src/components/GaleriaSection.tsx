@@ -91,7 +91,7 @@ export default function GaleriaSection() {
   return (
     <section id="galeria" className="bg-white py-24 px-6 relative overflow-hidden">
       {/* Plant shadow silhouette — top right */}
-      <svg aria-hidden="true" className="hidden sm:block absolute -top-4 right-0 w-48 h-72 pointer-events-none opacity-[0.06] z-0" viewBox="0 0 200 300" fill="#3E2F52">
+      <svg aria-hidden="true" className="absolute -top-2 right-0 w-24 h-36 sm:w-48 sm:h-72 pointer-events-none opacity-[0.06] z-0" viewBox="0 0 200 300" fill="#3E2F52">
         <path d="M60 300 C65 238 82 172 108 108 C134 44 168 10 200 0 C172 22 138 58 112 124 C86 190 68 252 63 300 Z"/>
         <path d="M108 185 C122 152 145 120 172 90 C160 126 136 160 112 190 Z"/>
         <ellipse cx="195" cy="12" rx="18" ry="7" transform="rotate(-38 195 12)"/>
@@ -99,7 +99,7 @@ export default function GaleriaSection() {
       </svg>
 
       {/* Lavender botanical — bottom right */}
-      <svg aria-hidden="true" className="hidden sm:block absolute bottom-0 right-8 w-20 h-40 pointer-events-none z-0" viewBox="0 0 65 150" fill="none">
+      <svg aria-hidden="true" className="absolute bottom-0 right-4 w-12 h-20 sm:w-20 sm:h-40 pointer-events-none z-0" viewBox="0 0 65 150" fill="none">
         <line x1="12" y1="150" x2="10" y2="55" stroke="#C7AD79" strokeWidth="1" opacity="0.38"/>
         <line x1="33" y1="150" x2="33" y2="60" stroke="#C7AD79" strokeWidth="1" opacity="0.32"/>
         <line x1="53" y1="150" x2="55" y2="65" stroke="#C7AD79" strokeWidth="1" opacity="0.35"/>
