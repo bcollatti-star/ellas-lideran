@@ -8,6 +8,53 @@ import FadeIn from "@/components/FadeIn";
 const generales = Array.from({ length: 8 }, (_, i) => `/general_${i + 1}.jpeg`);
 const ganadoras = Array.from({ length: 11 }, (_, i) => `/ganadoras_${i + 1}.jpeg`);
 
+const lideres: { categoria: string; nombres: string[] }[] = [
+  {
+    categoria: "Educación y formación",
+    nombres: ["Inés Risso", "María Cecilia Ribecco", "María Cecilia Sas", "Estela Vallebella"],
+  },
+  {
+    categoria: "Salud y bienestar",
+    nombres: ["Carolina Chacón", "Gisela Pavé", "Marcela Ré", "Liliana Drovetta de España"],
+  },
+  {
+    categoria: "Innovación, ciencia y tecnología",
+    nombres: ["Leticia Mesa", "Paula Durán", "Milagros Rossler", "Carla Borini Etichetti"],
+  },
+  {
+    categoria: "Producción, industria y trabajo",
+    nombres: ["Patricia Iraola", "Paula Rodeles", "Marisabel Pelossi", "Fabiana Trobbiani", "Veronica Martinengo"],
+  },
+  {
+    categoria: "Economía social y cooperativismo",
+    nombres: ["María Eva Juncos", "Leticia Solari", "Viviana Imperiale", "Raquel Dominguez"],
+  },
+  {
+    categoria: "Cultura y comunicación",
+    nombres: ["Virginia Tola", "Adriana Imhoff", "Giselle Bilesio", "Natalí Otero", "Karina Vimonte"],
+  },
+  {
+    categoria: "Deporte y vida saludable",
+    nombres: ["Cecilia Carranza", "Erica Yenssen", "Mia Tatiana Silva", "Yanina Martínez"],
+  },
+  {
+    categoria: "Comunidad y territorio",
+    nombres: ["Ana Clara Dalla Valle", "Viviana Gorosito", "Vilma Ludueña", "Nélida Lidia Fontán", "Liliana Alberto", "María Fernanda Balbo"],
+  },
+  {
+    categoria: "Seguridad, justicia y derechos humanos",
+    nombres: ["María Cecilia Vranicich", "Ana María Arce", "María Soledad Martinez", "Araceli Díaz", "Mariana Ferreghini"],
+  },
+  {
+    categoria: "Agroindustria y ruralidad",
+    nombres: ["María Soledad Aramendi", "Mónica Mansilla", "Pilu Giraudo", "Nora Badalotti", "Gina Bentivoglio"],
+  },
+  {
+    categoria: "Liderazgo empresarial y corporativo",
+    nombres: ["Erika Pasero Proske", "Vanina Procopio", "Sandra Yachelini", "Clara Altamirano"],
+  },
+];
+
 function Carousel({ images, label }: { images: string[]; label: string }) {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -202,8 +249,27 @@ export default function GaleriaSection() {
         </FadeIn>
 
         <FadeIn direction="up" delay={100}>
-          <div className="mb-24">
+          <div className="mb-12">
             <Carousel images={ganadoras} label="Líder reconocida — Ellas Lideran 2026" />
+          </div>
+        </FadeIn>
+
+        {/* Líderes por categoría */}
+        <FadeIn direction="up" delay={80}>
+          <div className="mb-24 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {lideres.map(({ categoria, nombres }) => (
+              <div key={categoria} className="rounded-2xl border border-gold/15 bg-charcoal/[0.02] px-5 py-5">
+                <p className="text-gold text-[10px] tracking-[0.25em] uppercase font-semibold mb-3">{categoria}</p>
+                <ul className="space-y-1.5">
+                  {nombres.map((nombre) => (
+                    <li key={nombre} className="flex items-center gap-2 text-charcoal/75 text-sm">
+                      <span className="w-1 h-1 rounded-full bg-gold/50 flex-shrink-0" />
+                      {nombre}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </FadeIn>
 
