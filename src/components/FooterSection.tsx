@@ -6,8 +6,10 @@ const navLinks = [
   { label: "Sobre el evento", href: "#sobre" },
   { label: "Ámbitos", href: "#ambitos" },
   { label: "Proceso", href: "#fases" },
+  { label: "Edición 2026", href: "#edicion2026" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
+  { label: "Fecha y lugar", href: "#lugar" },
   { label: "Postular", href: "/postular" },
 ];
 
