@@ -89,7 +89,34 @@ function Carousel({ images, label }: { images: string[]; label: string }) {
 
 export default function GaleriaSection() {
   return (
-    <section id="galeria" className="bg-white py-24 px-6">
+    <section id="galeria" className="bg-white py-24 px-6 relative overflow-hidden">
+      {/* Plant shadow silhouette — top right */}
+      <svg aria-hidden="true" className="absolute -top-4 right-0 w-48 h-72 pointer-events-none opacity-[0.06]" viewBox="0 0 200 300" fill="#3E2F52">
+        <path d="M60 300 C65 238 82 172 108 108 C134 44 168 10 200 0 C172 22 138 58 112 124 C86 190 68 252 63 300 Z"/>
+        <path d="M108 185 C122 152 145 120 172 90 C160 126 136 160 112 190 Z"/>
+        <ellipse cx="195" cy="12" rx="18" ry="7" transform="rotate(-38 195 12)"/>
+        <ellipse cx="178" cy="28" rx="16" ry="6" transform="rotate(-30 178 28)"/>
+      </svg>
+
+      {/* Lavender botanical — bottom right */}
+      <svg aria-hidden="true" className="absolute bottom-0 right-8 w-20 h-40 pointer-events-none" viewBox="0 0 65 150" fill="none">
+        <line x1="12" y1="150" x2="10" y2="55" stroke="#C7AD79" strokeWidth="1" opacity="0.38"/>
+        <line x1="33" y1="150" x2="33" y2="60" stroke="#C7AD79" strokeWidth="1" opacity="0.32"/>
+        <line x1="53" y1="150" x2="55" y2="65" stroke="#C7AD79" strokeWidth="1" opacity="0.35"/>
+        <ellipse cx="10" cy="47" rx="2.5" ry="4.5" fill="#3E2F52" opacity="0.22"/>
+        <ellipse cx="7" cy="56" rx="2" ry="3.5" fill="#3E2F52" opacity="0.16"/>
+        <ellipse cx="14" cy="60" rx="2" ry="3.5" fill="#3E2F52" opacity="0.14"/>
+        <ellipse cx="33" cy="52" rx="2.5" ry="4.5" fill="#3E2F52" opacity="0.22"/>
+        <ellipse cx="30" cy="62" rx="2" ry="3.5" fill="#3E2F52" opacity="0.16"/>
+        <ellipse cx="37" cy="66" rx="2" ry="3.5" fill="#3E2F52" opacity="0.14"/>
+        <ellipse cx="55" cy="57" rx="2.5" ry="4.5" fill="#3E2F52" opacity="0.2"/>
+        <ellipse cx="52" cy="67" rx="2" ry="3.5" fill="#3E2F52" opacity="0.15"/>
+        <path d="M10 102 C4 95 2 84 9 78 C10 84 10 95 10 102 Z" fill="#C7AD79" opacity="0.18"/>
+        <path d="M10 102 C16 95 18 84 11 78 C10 84 10 95 10 102 Z" fill="#C7AD79" opacity="0.15"/>
+        <path d="M33 107 C27 100 25 89 32 83 C33 89 33 100 33 107 Z" fill="#C7AD79" opacity="0.18"/>
+        <path d="M33 107 C39 100 41 89 34 83 C33 89 33 100 33 107 Z" fill="#C7AD79" opacity="0.15"/>
+      </svg>
+
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
