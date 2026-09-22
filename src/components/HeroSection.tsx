@@ -76,7 +76,7 @@ export default function HeroSection() {
         {/* Stats */}
         <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto border-t border-white/10 pt-8 mb-8">
           {[
-            { value: "100", label: "Mujeres líderes" },
+            { value: "50", label: "Mujeres líderes" },
             { value: "100", label: "Preseleccionadas" },
             { value: "+1000", label: "Postuladas" },
             { value: "12", label: "Ámbitos" },
