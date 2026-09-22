@@ -49,7 +49,7 @@ export default function HeroSection() {
         </div>
 
         <p className="text-white/80 text-base sm:text-xl max-w-2xl mx-auto mb-3 leading-relaxed font-light">
-          El reconocimiento provincial a mujeres santafesinas
+          El reconocimiento a mujeres santafesinas
           <br className="hidden sm:block" /> que transforman la provincia.
         </p>
 
