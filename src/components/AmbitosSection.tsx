@@ -1,18 +1,17 @@
 import FadeIn from "@/components/FadeIn";
 
 const ambitos = [
-  "Educación",
-  "Salud",
-  "Ciencia",
-  "Tecnología e innovación",
-  "Producción",
-  "Comunicación",
-  "Deporte",
-  "Economía",
-  "Ruralidad",
+  "Educación y formación",
+  "Salud y bienestar",
+  "Deporte y vida saludable",
+  "Innovación, ciencia y tecnología",
+  "Producción, industria y trabajo",
+  "Cultura y comunicación",
+  "Economía social y cooperativismo",
   "Comunidad y territorio",
-  "Justicia y Derechos Humanos",
-  "Liderazgo empresarial",
+  "Seguridad, justicia y derechos humanos",
+  "Agroindustria y ruralidad",
+  "Liderazgo empresarial y corporativo",
 ];
 
 export default function AmbitosSection() {
@@ -62,7 +61,7 @@ export default function AmbitosSection() {
               <div className="h-px w-20 bg-gold/30" />
             </div>
             <p className="text-charcoal/60 mt-6 max-w-xl mx-auto">
-              Reconocemos el liderazgo en doce ámbitos que reflejan la diversidad y la riqueza de la
+              Reconocemos el liderazgo en once ámbitos que reflejan la diversidad y la riqueza de la
               provincia de Santa Fe.
             </p>
           </div>
