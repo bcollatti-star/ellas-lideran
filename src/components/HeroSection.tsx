@@ -105,7 +105,7 @@ export default function HeroSection() {
             { value: "50", label: "Mujeres líderes" },
             { value: "100", label: "Preseleccionadas" },
             { value: "+1000", label: "Postuladas" },
-            { value: "12", label: "Ámbitos" },
+            { value: "11", label: "Ámbitos" },
           ].map(({ value, label }) => (
             <div key={label} className="text-center">
               <p className="font-display text-3xl font-bold text-gold">{value}</p>
