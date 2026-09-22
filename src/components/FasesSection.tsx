@@ -27,7 +27,24 @@ const fases = [
 
 export default function FasesSection() {
   return (
-    <section id="fases" className="bg-cream py-24 px-6">
+    <section id="fases" className="bg-cream py-24 px-6 relative overflow-hidden">
+      {/* Plant shadow silhouette — top left */}
+      <svg aria-hidden="true" className="absolute -top-8 -left-8 w-56 h-80 sm:w-72 sm:h-96 pointer-events-none opacity-[0.07]" viewBox="0 0 220 320" fill="#3E2F52">
+        <path d="M70 320 C75 255 90 185 115 120 C140 55 175 15 210 0 C180 20 145 62 120 128 C95 194 78 258 72 320 Z"/>
+        <path d="M115 195 C128 162 150 130 178 98 C166 134 144 167 118 200 Z"/>
+        <path d="M88 250 C72 220 62 186 74 158 C78 188 86 222 91 252 Z"/>
+        <ellipse cx="204" cy="14" rx="20" ry="8" transform="rotate(-38 204 14)"/>
+        <ellipse cx="186" cy="30" rx="17" ry="7" transform="rotate(-30 186 30)"/>
+        <ellipse cx="215" cy="5" rx="15" ry="6" transform="rotate(-52 215 5)"/>
+      </svg>
+
+      {/* Gold curves — bottom right */}
+      <svg aria-hidden="true" className="absolute bottom-0 right-0 w-64 h-64 pointer-events-none opacity-[0.16]" viewBox="0 0 280 280" fill="none">
+        <path d="M280 280 C210 210 155 165 110 90 C65 15 40 0 0 0" stroke="#C6A24C" strokeWidth="1.5"/>
+        <path d="M280 230 C218 170 168 130 128 62 C88 -6 60 0 20 0" stroke="#C6A24C" strokeWidth="1"/>
+        <path d="M280 180 C226 130 182 98 148 38 C114 -22 88 0 50 0" stroke="#DAA925" strokeWidth="0.7"/>
+      </svg>
+
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <div className="text-center mb-16">
