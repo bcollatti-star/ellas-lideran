@@ -291,7 +291,7 @@ export default function GaleriaSection() {
         </FadeIn>
 
         <FadeIn direction="up" delay={100}>
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-2xl mx-auto mb-10">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-charcoal/5 border border-gold/15 shadow-lg">
               <Image
                 src="/menciones.jpeg"
@@ -300,6 +300,31 @@ export default function GaleriaSection() {
                 className="object-contain"
                 sizes="(max-width: 768px) 100vw, 672px"
               />
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn direction="up" delay={80}>
+          <div className="max-w-2xl mx-auto mb-8">
+            <div className="rounded-2xl border border-gold/15 bg-charcoal/[0.02] px-6 py-6 grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-3">
+              {[
+                "María Eugenia Schmuck",
+                "Cristina Cuvertino",
+                "Mime Mascaró",
+                "Rita Larrañaga",
+                "Graciela Altomonte Alabarce",
+                'Silvia "Pita" Klingler',
+                "Rogelia Epelbaum",
+                "Marisa Gallina",
+                "Patricia García",
+                "Gisela Scaglia",
+                "Margarita Zabalza",
+              ].map((nombre) => (
+                <div key={nombre} className="flex items-center gap-2 text-charcoal/75 text-sm">
+                  <span className="w-1 h-1 rounded-full bg-gold/50 flex-shrink-0" />
+                  {nombre}
+                </div>
+              ))}
             </div>
           </div>
         </FadeIn>
