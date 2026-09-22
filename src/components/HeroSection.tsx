@@ -23,6 +23,32 @@ export default function HeroSection() {
       />
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
 
+      {/* Gold organic curves — top right */}
+      <svg
+        aria-hidden="true"
+        className="absolute top-0 right-0 w-72 h-72 sm:w-[400px] sm:h-[400px] pointer-events-none opacity-[0.28]"
+        viewBox="0 0 400 400"
+        fill="none"
+      >
+        <path d="M400 0 C330 75 250 115 195 210 C140 305 75 345 0 400" stroke="#C6A24C" strokeWidth="1.5"/>
+        <path d="M400 55 C340 120 265 158 215 245 C165 332 100 365 30 400" stroke="#C6A24C" strokeWidth="1"/>
+        <path d="M400 110 C348 168 280 205 238 282 C196 359 135 385 65 400" stroke="#DAA925" strokeWidth="0.7"/>
+        <path d="M400 170 C358 220 300 258 265 320 C230 382 175 397 105 400" stroke="#C6A24C" strokeWidth="0.5"/>
+      </svg>
+
+      {/* Plum geometric panel — bottom left */}
+      <svg
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 w-44 h-52 sm:w-56 sm:h-64 pointer-events-none"
+        viewBox="0 0 220 270"
+        fill="none"
+      >
+        <path d="M0 270 L0 65 C55 42 118 82 158 148 C198 214 210 270 210 270 Z" fill="#3E2F52" opacity="0.5"/>
+        <path d="M0 270 L0 128 C38 110 75 138 100 185 C125 232 142 270 142 270 Z" fill="#3E2F52" opacity="0.32"/>
+        <path d="M0 78 C55 42 118 82 158 148" stroke="#C6A24C" strokeWidth="1.2" opacity="0.65"/>
+        <path d="M0 138 C38 110 75 138 100 185" stroke="#C6A24C" strokeWidth="0.9" opacity="0.45"/>
+      </svg>
+
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center pt-24 pb-16 flex flex-col items-center">
         {/* Date badge */}
         <div className="inline-flex items-center gap-2 border border-gold/60 text-gold text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-8">
