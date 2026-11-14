@@ -69,7 +69,7 @@ function LoginForm({ onLogin }: { onLogin: () => void }) {
     <div className="min-h-screen flex items-center justify-center bg-charcoal px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <Image src="/logo-ellas-lideran-white.png" alt="Ellas Lideran" width={160} height={64} className="h-12 w-auto mx-auto mb-4" />
+          <Image src="/logo-ellas-lideran-white.png" alt="Ellas Lideran" width={240} height={96} className="h-20 w-auto mx-auto mb-4" />
           <p className="text-white/40 text-sm">Panel de administración</p>
         </div>
         <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-4">
