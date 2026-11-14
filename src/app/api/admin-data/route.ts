@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
-import { supabaseAdmin } from "@/lib/supabase";
+import { getSupabaseAdmin } from "@/lib/supabase";
+
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const store = await cookies();
   if (store.get("admin_session")?.value !== "authenticated") {
     return NextResponse.json({ error: "No autorizado" }, { status: 401 });
   }
-  const { data, error } = await supabaseAdmin
+  const { data, error } = await getSupabaseAdmin()
     .from("postulaciones")
     .select("*")
     .order("created_at", { ascending: false });
