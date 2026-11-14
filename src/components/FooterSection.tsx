@@ -65,7 +65,8 @@ export default function FooterSection() {
           <div>
             <p className="text-white/30 text-xs tracking-widest uppercase mb-5">El evento</p>
             <div className="space-y-4">
-              <div className="flex gap-3">
+              {/* LAUNCH: fecha y lugar ocultos hasta anuncio oficial */}
+              {/* <div className="flex gap-3">
                 <MapPin size={16} className="text-gold flex-shrink-0 mt-0.5" />
                 <div>
                   <p className="text-white/80 text-sm font-medium">La Fluvial</p>
@@ -79,7 +80,7 @@ export default function FooterSection() {
                 <div>
                   <p className="text-white/80 text-sm font-medium">19 de Marzo · 2027</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex gap-3">
                 <Mail size={16} className="text-gold flex-shrink-0 mt-0.5" />
                 <div>

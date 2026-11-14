@@ -50,11 +50,11 @@ export default function HeroSection() {
       </svg>
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-6 text-center pt-24 pb-16 flex flex-col items-center">
-        {/* Date badge */}
-        <div className="inline-flex items-center gap-2 border border-gold/60 text-gold text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-8">
+        {/* Date badge — LAUNCH: oculto hasta anuncio oficial */}
+        {/* <div className="inline-flex items-center gap-2 border border-gold/60 text-gold text-xs tracking-[0.25em] uppercase px-5 py-2 rounded-full mb-8">
           <Calendar size={13} />
           19 de Marzo · 2027
-        </div>
+        </div> */}
 
         {/* Logo */}
         <div className="flex justify-center mb-6">
@@ -79,10 +79,11 @@ export default function HeroSection() {
           <br className="hidden sm:block" /> que transforman la provincia.
         </p>
 
-        <div className="flex items-center justify-center gap-1.5 text-white/50 text-sm mb-8">
+        {/* Location — LAUNCH: oculto hasta anuncio oficial */}
+        {/* <div className="flex items-center justify-center gap-1.5 text-white/50 text-sm mb-8">
           <MapPin size={14} className="text-gold/70" />
           <span>La Fluvial · Rosario, Santa Fe</span>
-        </div>
+        </div> */}
 
         <div className="flex flex-col sm:flex-row gap-3 justify-center w-full max-w-sm sm:max-w-none mb-10">
           <a
@@ -100,7 +101,7 @@ export default function HeroSection() {
         </div>
 
         {/* Stats */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto border-t border-white/10 pt-8 mb-8">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-xl mx-auto border-t border-white/10 pt-8 mb-3">
           {[
             { value: "50", label: "Mujeres líderes" },
             { value: "100", label: "Preseleccionadas" },
@@ -113,12 +114,13 @@ export default function HeroSection() {
             </div>
           ))}
         </div>
+        <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] mb-8">En la edición 2026</p>
 
-        {/* Countdown */}
-        <div className="w-full border-t border-white/10 pt-8 pb-8">
+        {/* Countdown — LAUNCH: oculto hasta anuncio oficial */}
+        {/* <div className="w-full border-t border-white/10 pt-8 pb-8">
           <p className="text-white/30 text-[10px] uppercase tracking-[0.25em] mb-4">Faltan</p>
           <Countdown />
-        </div>
+        </div> */}
 
         {/* Instagram */}
         <a
