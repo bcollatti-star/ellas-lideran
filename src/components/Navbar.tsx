@@ -11,7 +11,7 @@ const links = [
   { label: "Edición 2026", href: "#edicion2026" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
-  { label: "Fecha y lugar", href: "#lugar" },
+  // { label: "Fecha y lugar", href: "#lugar" }, // LAUNCH: oculto hasta habilitación
 ];
 
 export default function Navbar() {

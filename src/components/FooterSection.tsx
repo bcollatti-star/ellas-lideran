@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Edición 2026", href: "#edicion2026" },
   { label: "Jurado", href: "#jurado" },
   { label: "Sponsors", href: "#sponsors" },
-  { label: "Fecha y lugar", href: "#lugar" },
+  // { label: "Fecha y lugar", href: "#lugar" }, // LAUNCH: oculto hasta habilitación
   { label: "Postular", href: "/postular" },
 ];
 
@@ -91,9 +91,9 @@ export default function FooterSection() {
             {/* Organizers credit */}
             <div className="mt-6 pt-6 border-t border-white/10">
               <p className="text-white/30 text-xs mb-2">Creado y organizado por</p>
-              <p className="text-white/40 text-sm">
-                Equipo Fundación Pensar Santa Fe
-              </p>
+              <p className="text-white/40 text-sm">Roxana Wolojviansky</p>
+              <p className="text-white/40 text-sm">Roxana Di Carlo</p>
+              <p className="text-white/40 text-sm">Equipo Fundación Pensar Santa Fe</p>
             </div>
           </div>
         </div>
