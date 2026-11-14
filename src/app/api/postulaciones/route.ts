@@ -17,6 +17,7 @@ export async function POST(req: Request) {
       logros: body.logros,
       instagram: body.instagram,
       link_referencia: body.linkReferencia,
+      contacto_candidata: body.contactoCandidata || null,
       estado: "sin_revisar",
     }]);
     if (error) {

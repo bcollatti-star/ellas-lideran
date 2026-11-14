@@ -27,6 +27,7 @@ interface FormData {
   telefonoPostulante: string;
   nombreCandidata: string;
   ciudadCandidata: string;
+  contactoCandidata: string;
   ambito: string;
   descripcion: string;
   logros: string;
@@ -40,6 +41,7 @@ const initial: FormData = {
   telefonoPostulante: "",
   nombreCandidata: "",
   ciudadCandidata: "",
+  contactoCandidata: "",
   ambito: "",
   descripcion: "",
   logros: "",
@@ -202,6 +204,10 @@ export default function PostularPage() {
                     <label className={labelClass}>Link de referencia</label>
                     <input type="url" placeholder="Web, nota, LinkedIn..." value={form.linkReferencia} onChange={set("linkReferencia")} className={inputClass} />
                   </div>
+                </div>
+                <div>
+                  <label className={labelClass}>Contacto de la candidata</label>
+                  <input type="text" placeholder="Teléfono o email de la candidata (opcional)" value={form.contactoCandidata} onChange={set("contactoCandidata")} className={inputClass} />
                 </div>
               </div>
             </div>
