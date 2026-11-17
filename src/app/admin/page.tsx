@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { LogOut, Search, Filter, Download, ChevronDown, ChevronUp, Trash2, CheckCircle, XCircle, Clock } from "lucide-react";
+import { LogOut, Search, Download, ChevronDown, ChevronUp, Trash2, CheckCircle, XCircle, Clock, MessageSquare } from "lucide-react";
 import Image from "next/image";
 
 const AMBITOS = [
@@ -118,6 +118,8 @@ export default function AdminPage() {
   const [estadoFilter, setEstadoFilter] = useState("Todos");
   const [expanded, setExpanded] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [notasEdit, setNotasEdit] = useState<Record<string, string>>({});
+  const [savingNota, setSavingNota] = useState<string | null>(null);
 
   const fetchData = useCallback(async () => {
     setLoading(true);
@@ -147,6 +149,24 @@ export default function AdminPage() {
     setData(d => d.map(p => p.id === id ? { ...p, estado } : p));
   };
 
+  const saveNota = async (id: string, existingNotas: string) => {
+    const newComment = notasEdit[id]?.trim();
+    if (!newComment) return;
+    setSavingNota(id);
+    const timestamp = new Date().toLocaleString("es-AR");
+    const updatedNotas = existingNotas
+      ? `${existingNotas}\n[${timestamp}] ${newComment}`
+      : `[${timestamp}] ${newComment}`;
+    await fetch(`/api/postulaciones/${id}`, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ notas: updatedNotas }),
+    });
+    setData(d => d.map(p => p.id === id ? { ...p, notas: updatedNotas } : p));
+    setNotasEdit(n => ({ ...n, [id]: "" }));
+    setSavingNota(null);
+  };
+
   const handleDelete = async (id: string) => {
     if (!confirm("¿Eliminar esta postulación?")) return;
     await fetch(`/api/postulaciones/${id}`, { method: "DELETE" });
@@ -157,10 +177,10 @@ export default function AdminPage() {
     const rows = filtered.map(p => [
       p.nombre_candidata, p.ciudad_candidata, p.ambito, p.estado,
       p.nombre_postulante, p.email_postulante, p.telefono_postulante,
-      p.descripcion, p.logros, p.instagram, p.link_referencia,
+      p.descripcion, p.logros, p.instagram, p.link_referencia, p.notas,
       new Date(p.created_at).toLocaleDateString("es-AR"),
     ]);
-    const header = ["Candidata","Ciudad","Ámbito","Estado","Postulante","Email","Teléfono","Descripción","Logros","Instagram","Link","Fecha"];
+    const header = ["Candidata","Ciudad","Ámbito","Estado","Postulante","Email","Teléfono","Descripción","Logros","Instagram","Link","Notas","Fecha"];
     const csv = [header, ...rows].map(r => r.map(c => `"${(c||"").replace(/"/g,'""')}"`).join(",")).join("\n");
     const blob = new Blob(["﻿" + csv], { type: "text/csv;charset=utf-8;" });
     const url = URL.createObjectURL(blob);
@@ -313,6 +333,34 @@ export default function AdminPage() {
                         <button onClick={() => handleDelete(p.id)} className="ml-auto flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-gray-100 text-gray-500 hover:bg-red-100 hover:text-red-600 transition-colors">
                           <Trash2 size={12} /> Eliminar
                         </button>
+                      </div>
+
+                      {/* Comentarios internos */}
+                      <div className="border-t border-gray-100 pt-4">
+                        <p className="text-xs text-gray-400 uppercase tracking-wide mb-2 flex items-center gap-1.5">
+                          <MessageSquare size={11} /> Notas internas
+                        </p>
+                        {p.notas && (
+                          <div className="bg-gray-50 rounded-xl p-3 mb-3 text-xs text-charcoal/70 whitespace-pre-wrap leading-relaxed">
+                            {p.notas}
+                          </div>
+                        )}
+                        <div className="flex gap-2 items-end">
+                          <textarea
+                            value={notasEdit[p.id] ?? ""}
+                            onChange={e => setNotasEdit(n => ({ ...n, [p.id]: e.target.value }))}
+                            placeholder="Agregar comentario interno..."
+                            rows={2}
+                            className="flex-1 text-sm border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:border-gold/50 resize-none"
+                          />
+                          <button
+                            onClick={() => saveNota(p.id, p.notas || "")}
+                            disabled={!notasEdit[p.id]?.trim() || savingNota === p.id}
+                            className="px-4 py-2 bg-gold text-white text-xs font-semibold rounded-xl hover:bg-gold-dark transition-colors disabled:opacity-40"
+                          >
+                            {savingNota === p.id ? "..." : "Agregar"}
+                          </button>
+                        </div>
                       </div>
                     </div>
                   )}
