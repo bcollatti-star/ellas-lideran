@@ -1,20 +1,25 @@
+"use client";
+
 import FadeIn from "@/components/FadeIn";
+import { useState } from "react";
 
 const ambitos = [
-  "Educación y formación",
-  "Salud y bienestar",
-  "Deporte y vida saludable",
-  "Innovación, ciencia y tecnología",
-  "Producción, industria y trabajo",
-  "Cultura y comunicación",
-  "Economía social y cooperativismo",
-  "Comunidad y territorio",
-  "Seguridad, justicia y derechos humanos",
-  "Agroindustria y ruralidad",
-  "Liderazgo empresarial y corporativo",
+  { nombre: "Educación y formación", descripcion: "Docentes, investigadoras, pedagogas, formadoras comunitarias, educadoras rurales, alfabetizadoras." },
+  { nombre: "Salud y bienestar", descripcion: "Médicas, enfermeras, promotoras de salud, especialistas en salud mental, mujeres que trabajan en prevención y cuidados." },
+  { nombre: "Deporte y vida saludable", descripcion: "Deportistas, entrenadoras, preparadoras físicas, promotoras de hábitos saludables." },
+  { nombre: "Innovación, ciencia y tecnología", descripcion: "Programadoras, científicas, líderes tech, creadoras de soluciones digitales, biotecnología, IA, tecnología aplicada." },
+  { nombre: "Producción, industria y trabajo", descripcion: "Líderes industriales, empresarias, operarias destacadas, mujeres que innovan en producción regional." },
+  { nombre: "Cultura y comunicación", descripcion: "Artistas, comunicadoras, periodistas, creadoras digitales, gestoras culturales." },
+  { nombre: "Economía social y cooperativismo", descripcion: "Cooperativas, emprendimientos de triple impacto, reciclado, cuidado comunitario, inclusión laboral." },
+  { nombre: "Comunidad y territorio", descripcion: "Referentes barriales, mujeres que sostienen comedores, centros comunitarios, clubes, mediadoras sociales." },
+  { nombre: "Seguridad, justicia y derechos humanos", descripcion: "Mujeres en acceso a la justicia, género, niñez, violencias, defensoras de derechos." },
+  { nombre: "Agroindustria y ruralidad", descripcion: "Productoras rurales, ingenieras agrónomas, cooperativistas, exportadoras." },
+  { nombre: "Liderazgo empresarial y corporativo", descripcion: "CEOs, gerentas, directoras, mujeres en conducción de grandes equipos." },
 ];
 
 export default function AmbitosSection() {
+  const [active, setActive] = useState<number | null>(null);
+
   return (
     <section id="ambitos" className="bg-white py-24 px-6 relative overflow-hidden">
       {/* Gold organic curves — top right */}
@@ -64,19 +69,41 @@ export default function AmbitosSection() {
         </FadeIn>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-stretch">
-          {ambitos.map((ambito, i) => (
-            <FadeIn key={ambito} delay={i * 50} direction="up" className="h-full">
-              <div className="group relative border border-gold/20 rounded-2xl px-5 py-6 text-center hover:border-gold hover:bg-gold/5 transition-all duration-200 cursor-default h-full flex flex-col justify-center">
-                <div className="w-6 h-0.5 bg-gold/30 mx-auto mb-3 group-hover:bg-gold group-hover:w-8 transition-all duration-200" />
-                <span className="text-charcoal/80 font-medium text-sm leading-snug group-hover:text-charcoal transition-colors">
-                  {ambito}
-                </span>
-                <span className="absolute top-3 right-3 text-gold/20 font-display text-xs font-bold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
-            </FadeIn>
-          ))}
+          {ambitos.map((ambito, i) => {
+            const isActive = active === i;
+            return (
+              <FadeIn key={ambito.nombre} delay={i * 50} direction="up" className="h-full">
+                <div
+                  className="relative border rounded-2xl px-5 py-6 text-center transition-all duration-300 cursor-pointer h-full flex flex-col justify-center overflow-hidden"
+                  style={{ minHeight: "7rem" }}
+                  onMouseEnter={() => setActive(i)}
+                  onMouseLeave={() => setActive(null)}
+                  onClick={() => setActive(isActive ? null : i)}
+                >
+                  {/* Default state */}
+                  <div className={`transition-all duration-300 ${isActive ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
+                    <div className="w-6 h-0.5 bg-gold/30 mx-auto mb-3" />
+                    <span className="text-charcoal/80 font-medium text-sm leading-snug">
+                      {ambito.nombre}
+                    </span>
+                    <span className="absolute top-3 right-3 text-gold/20 font-display text-xs font-bold">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  {/* Overlay on hover/tap */}
+                  <div className={`absolute inset-0 bg-gold flex flex-col items-center justify-center px-4 rounded-2xl transition-all duration-300 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}>
+                    <p className="text-white font-semibold text-xs leading-relaxed text-center">
+                      {ambito.descripcion}
+                    </p>
+                  </div>
+
+                  {/* Border color */}
+                  <div className={`absolute inset-0 rounded-2xl border transition-colors duration-300 pointer-events-none ${isActive ? "border-gold" : "border-gold/20"}`} />
+                </div>
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </section>
