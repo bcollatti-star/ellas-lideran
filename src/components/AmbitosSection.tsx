@@ -74,32 +74,28 @@ export default function AmbitosSection() {
             return (
               <FadeIn key={ambito.nombre} delay={i * 50} direction="up" className="h-full">
                 <div
-                  className="relative border rounded-2xl px-5 py-6 text-center transition-all duration-300 cursor-pointer h-full flex flex-col justify-center overflow-hidden"
-                  style={{ minHeight: "7rem" }}
+                  className={`relative border rounded-2xl px-5 py-6 text-center transition-all duration-300 cursor-pointer h-full flex flex-col justify-center ${isActive ? "border-gold bg-gold" : "border-gold/20 bg-white"}`}
                   onMouseEnter={() => setActive(i)}
                   onMouseLeave={() => setActive(null)}
                   onClick={() => setActive(isActive ? null : i)}
                 >
                   {/* Default state */}
-                  <div className={`transition-all duration-300 ${isActive ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}>
+                  <div className={`transition-all duration-300 ${isActive ? "opacity-0 absolute inset-0" : "opacity-100"}`}>
+                    <span className="block text-gold/30 font-display text-xs font-bold mb-2">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
                     <div className="w-6 h-0.5 bg-gold/30 mx-auto mb-3" />
                     <span className="text-charcoal/80 font-medium text-sm leading-snug">
                       {ambito.nombre}
                     </span>
-                    <span className="absolute top-3 right-3 text-gold/20 font-display text-xs font-bold">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
                   </div>
 
                   {/* Overlay on hover/tap */}
-                  <div className={`absolute inset-0 bg-gold flex flex-col items-center justify-center px-4 rounded-2xl transition-all duration-300 ${isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-full"}`}>
+                  <div className={`transition-all duration-300 ${isActive ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"}`}>
                     <p className="text-white font-semibold text-xs leading-relaxed text-center">
                       {ambito.descripcion}
                     </p>
                   </div>
-
-                  {/* Border color */}
-                  <div className={`absolute inset-0 rounded-2xl border transition-colors duration-300 pointer-events-none ${isActive ? "border-gold" : "border-gold/20"}`} />
                 </div>
               </FadeIn>
             );
