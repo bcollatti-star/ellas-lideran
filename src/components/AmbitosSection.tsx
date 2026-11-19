@@ -63,8 +63,7 @@ export default function AmbitosSection() {
           </div>
         </FadeIn>
 
-        {/* LAUNCH: grilla de ámbitos oculta hasta habilitación */}
-        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-stretch">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 items-stretch">
           {ambitos.map((ambito, i) => (
             <FadeIn key={ambito} delay={i * 50} direction="up" className="h-full">
               <div className="group relative border border-gold/20 rounded-2xl px-5 py-6 text-center hover:border-gold hover:bg-gold/5 transition-all duration-200 cursor-default h-full flex flex-col justify-center">
@@ -78,13 +77,7 @@ export default function AmbitosSection() {
               </div>
             </FadeIn>
           ))}
-        </div> */}
-
-        <FadeIn direction="up">
-          <p className="text-center text-gold mt-4 text-base font-semibold italic max-w-lg mx-auto">
-            Muy pronto conoceremos los ámbitos de liderazgo reconocidos en esta nueva edición.
-          </p>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

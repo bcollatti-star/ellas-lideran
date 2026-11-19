@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Send, CheckCircle, AlertCircle, ArrowLeft, Clock } from "lucide-react";
 
 // FORMULARIO HABILITADO — para deshabilitar, cambiar OPEN a false
-const OPEN = true;
+const OPEN = false;
 
 const ambitos = [
   "Educación y formación",
