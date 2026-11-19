@@ -74,13 +74,13 @@ export default function AmbitosSection() {
             return (
               <FadeIn key={ambito.nombre} delay={i * 50} direction="up" className="h-full">
                 <div
-                  className={`relative border rounded-2xl px-5 py-6 text-center transition-all duration-300 cursor-pointer h-full flex flex-col justify-center ${isActive ? "border-gold bg-gold" : "border-gold/20 bg-white"}`}
+                  className={`relative border rounded-2xl px-5 py-6 text-center transition-colors duration-300 cursor-pointer h-full flex flex-col justify-center ${isActive ? "border-gold bg-gold" : "border-gold/20 bg-white"}`}
                   onMouseEnter={() => setActive(i)}
                   onMouseLeave={() => setActive(null)}
-                  onClick={() => setActive(isActive ? null : i)}
+                  onTouchEnd={(e) => { e.preventDefault(); setActive(isActive ? null : i); }}
                 >
-                  {/* Default state */}
-                  <div className={`transition-all duration-300 ${isActive ? "opacity-0 absolute inset-0" : "opacity-100"}`}>
+                  {/* Default state — always in flow to maintain card height */}
+                  <div className={`transition-opacity duration-300 ${isActive ? "opacity-0" : "opacity-100"}`}>
                     <span className="block text-gold/30 font-display text-xs font-bold mb-2">
                       {String(i + 1).padStart(2, "0")}
                     </span>
@@ -90,8 +90,8 @@ export default function AmbitosSection() {
                     </span>
                   </div>
 
-                  {/* Overlay on hover/tap */}
-                  <div className={`transition-all duration-300 ${isActive ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"}`}>
+                  {/* Description overlay — absolute so it doesn't affect height */}
+                  <div className={`absolute inset-0 flex items-center justify-center px-4 rounded-2xl transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
                     <p className="text-white font-semibold text-xs leading-relaxed text-center">
                       {ambito.descripcion}
                     </p>
